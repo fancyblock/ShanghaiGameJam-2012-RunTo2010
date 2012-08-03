@@ -1,0 +1,492 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CF0B5F6F15BAFF94004DBDF9 /* GUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0B5F6E15BAFF94004DBDF9 /* GUIButton.m */; };
+		CF0B5F7215BAFFDC004DBDF9 /* GUICheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0B5F7115BAFFDC004DBDF9 /* GUICheckBox.m */; };
+		CF30A79315AF340200AAE45D /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF30A79215AF340200AAE45D /* OpenAL.framework */; };
+		CF30A79615AF340D00AAE45D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF30A79515AF340D00AAE45D /* AudioToolbox.framework */; };
+		CF4838381593890500529A53 /* TouchEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4838371593890500529A53 /* TouchEvent.m */; };
+		CF4C16F81563FE7B0078F4D6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF4C16F71563FE7B0078F4D6 /* UIKit.framework */; };
+		CF4C16FA1563FE7B0078F4D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF4C16F91563FE7B0078F4D6 /* Foundation.framework */; };
+		CF4C16FC1563FE7B0078F4D6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF4C16FB1563FE7B0078F4D6 /* CoreGraphics.framework */; };
+		CF4C17021563FE7B0078F4D6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF4C17001563FE7B0078F4D6 /* InfoPlist.strings */; };
+		CF4C17041563FE7B0078F4D6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4C17031563FE7B0078F4D6 /* main.m */; };
+		CF4C17081563FE7B0078F4D6 /* HIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4C17071563FE7B0078F4D6 /* HIAppDelegate.m */; };
+		CF4FFE74159EEAB9001C8234 /* nackm.png in Resources */ = {isa = PBXBuildFile; fileRef = CF4FFE73159EEAB9001C8234 /* nackm.png */; };
+		CF4FFE78159F0B3B001C8234 /* GLController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4FFE77159F0B3B001C8234 /* GLController.m */; };
+		CF4FFE7B159F5B3E001C8234 /* Sprite.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4FFE7A159F5B3E001C8234 /* Sprite.m */; };
+		CF5495C315A1FFAB004CE6A6 /* GraphicFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5495C215A1FFAB004CE6A6 /* GraphicFactory.m */; };
+		CF628E9115AB4D3D00B88C1C /* TestTask.m in Sources */ = {isa = PBXBuildFile; fileRef = CF628E9015AB4D3D00B88C1C /* TestTask.m */; };
+		CF6E095615B12FEC002B3D2B /* 05.png in Resources */ = {isa = PBXBuildFile; fileRef = CF6E095515B12FEC002B3D2B /* 05.png */; };
+		CF6E095915B155D5002B3D2B /* zombie.png in Resources */ = {isa = PBXBuildFile; fileRef = CF6E095815B155D5002B3D2B /* zombie.png */; };
+		CF6E095B15B157C4002B3D2B /* snake.png in Resources */ = {isa = PBXBuildFile; fileRef = CF6E095A15B157C4002B3D2B /* snake.png */; };
+		CF74090D15B92B52003FF3CE /* MovieClip.m in Sources */ = {isa = PBXBuildFile; fileRef = CF74090C15B92B51003FF3CE /* MovieClip.m */; };
+		CF74380715AD8B5A007E40A8 /* UIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CF74380615AD8B5A007E40A8 /* UIManager.m */; };
+		CF76B95C15AFC80D00D34DC1 /* UIWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = CF76B95B15AFC80D00D34DC1 /* UIWidget.m */; };
+		CF786EB115B7A8D500099D71 /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CF786EB015B7A8D500099D71 /* SoundManager.m */; };
+		CF786EB415B7BA9000099D71 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF786EB315B7BA9000099D71 /* AVFoundation.framework */; };
+		CF786EB615B7BB5600099D71 /* bgm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CF786EB515B7BB5600099D71 /* bgm.mp3 */; };
+		CF786EB915B7C2FF00099D71 /* PlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF786EB815B7C2FF00099D71 /* PlayerController.m */; };
+		CF786EBB15B7DE7E00099D71 /* eat.wav in Resources */ = {isa = PBXBuildFile; fileRef = CF786EBA15B7DE7E00099D71 /* eat.wav */; };
+		CF7B773A15907F79006F03C6 /* RenderCore.m in Sources */ = {isa = PBXBuildFile; fileRef = CF7B773915907F79006F03C6 /* RenderCore.m */; };
+		CF7B774115908129006F03C6 /* TaskManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CF7B774015908129006F03C6 /* TaskManager.m */; };
+		CF7B774415908F23006F03C6 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = CF7B774315908F23006F03C6 /* Task.m */; };
+		CF7E1DEC15661E12005D58C9 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF7E1DEB15661E12005D58C9 /* OpenGLES.framework */; };
+		CF7E1DEF15661E9A005D58C9 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF7E1DEE15661E9A005D58C9 /* GLKit.framework */; };
+		CF7E1DF315661FDD005D58C9 /* HIApp.m in Sources */ = {isa = PBXBuildFile; fileRef = CF7E1DF215661FDD005D58C9 /* HIApp.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CF0B5F6D15BAFF94004DBDF9 /* GUIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GUIButton.h; path = Gui/UIController/GUIButton.h; sourceTree = "<group>"; };
+		CF0B5F6E15BAFF94004DBDF9 /* GUIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GUIButton.m; path = Gui/UIController/GUIButton.m; sourceTree = "<group>"; };
+		CF0B5F7015BAFFDC004DBDF9 /* GUICheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GUICheckBox.h; path = Gui/UIController/GUICheckBox.h; sourceTree = "<group>"; };
+		CF0B5F7115BAFFDC004DBDF9 /* GUICheckBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GUICheckBox.m; path = Gui/UIController/GUICheckBox.m; sourceTree = "<group>"; };
+		CF30A79215AF340200AAE45D /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		CF30A79515AF340D00AAE45D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		CF4838361593890500529A53 /* TouchEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TouchEvent.h; path = Events/TouchEvent.h; sourceTree = "<group>"; };
+		CF4838371593890500529A53 /* TouchEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TouchEvent.m; path = Events/TouchEvent.m; sourceTree = "<group>"; };
+		CF4C16F31563FE7B0078F4D6 /* SGJ2012.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SGJ2012.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF4C16F71563FE7B0078F4D6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CF4C16F91563FE7B0078F4D6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CF4C16FB1563FE7B0078F4D6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CF4C16FF1563FE7B0078F4D6 /* SGJ2012-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SGJ2012-Info.plist"; sourceTree = "<group>"; };
+		CF4C17011563FE7B0078F4D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CF4C17031563FE7B0078F4D6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CF4C17051563FE7B0078F4D6 /* SGJ2012-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SGJ2012-Prefix.pch"; sourceTree = "<group>"; };
+		CF4C17061563FE7B0078F4D6 /* HIAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HIAppDelegate.h; sourceTree = "<group>"; };
+		CF4C17071563FE7B0078F4D6 /* HIAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HIAppDelegate.m; sourceTree = "<group>"; };
+		CF4FFE73159EEAB9001C8234 /* nackm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nackm.png; sourceTree = "<group>"; };
+		CF4FFE76159F0B3B001C8234 /* GLController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLController.h; path = HIApp/GLController.h; sourceTree = "<group>"; };
+		CF4FFE77159F0B3B001C8234 /* GLController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLController.m; path = HIApp/GLController.m; sourceTree = "<group>"; };
+		CF4FFE79159F5B3E001C8234 /* Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Sprite.h; path = Graphic/Sprite.h; sourceTree = "<group>"; };
+		CF4FFE7A159F5B3E001C8234 /* Sprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Sprite.m; path = Graphic/Sprite.m; sourceTree = "<group>"; };
+		CF5495C115A1FFAB004CE6A6 /* GraphicFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GraphicFactory.h; path = Graphic/GraphicFactory.h; sourceTree = "<group>"; };
+		CF5495C215A1FFAB004CE6A6 /* GraphicFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GraphicFactory.m; path = Graphic/GraphicFactory.m; sourceTree = "<group>"; };
+		CF628E8F15AB4D3D00B88C1C /* TestTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestTask.h; path = Demo/TestTask.h; sourceTree = "<group>"; };
+		CF628E9015AB4D3D00B88C1C /* TestTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestTask.m; path = Demo/TestTask.m; sourceTree = "<group>"; };
+		CF6E095515B12FEC002B3D2B /* 05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 05.png; sourceTree = "<group>"; };
+		CF6E095815B155D5002B3D2B /* zombie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zombie.png; sourceTree = "<group>"; };
+		CF6E095A15B157C4002B3D2B /* snake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snake.png; sourceTree = "<group>"; };
+		CF74090B15B92B51003FF3CE /* MovieClip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieClip.h; path = Graphic/MovieClip.h; sourceTree = "<group>"; };
+		CF74090C15B92B51003FF3CE /* MovieClip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieClip.m; path = Graphic/MovieClip.m; sourceTree = "<group>"; };
+		CF74380515AD8B5A007E40A8 /* UIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIManager.h; path = Gui/UIManager.h; sourceTree = "<group>"; };
+		CF74380615AD8B5A007E40A8 /* UIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIManager.m; path = Gui/UIManager.m; sourceTree = "<group>"; };
+		CF76B95A15AFC80D00D34DC1 /* UIWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIWidget.h; path = Gui/UIWidget.h; sourceTree = "<group>"; };
+		CF76B95B15AFC80D00D34DC1 /* UIWidget.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIWidget.m; path = Gui/UIWidget.m; sourceTree = "<group>"; };
+		CF786EAF15B7A8D500099D71 /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoundManager.h; path = Sound/SoundManager.h; sourceTree = "<group>"; };
+		CF786EB015B7A8D500099D71 /* SoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoundManager.m; path = Sound/SoundManager.m; sourceTree = "<group>"; };
+		CF786EB315B7BA9000099D71 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		CF786EB515B7BB5600099D71 /* bgm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgm.mp3; sourceTree = "<group>"; };
+		CF786EB715B7C2FF00099D71 /* PlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerController.h; path = Sound/PlayerController.h; sourceTree = "<group>"; };
+		CF786EB815B7C2FF00099D71 /* PlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayerController.m; path = Sound/PlayerController.m; sourceTree = "<group>"; };
+		CF786EBA15B7DE7E00099D71 /* eat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = eat.wav; sourceTree = "<group>"; };
+		CF7B773815907F79006F03C6 /* RenderCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RenderCore.h; path = Graphic/RenderCore.h; sourceTree = "<group>"; };
+		CF7B773915907F79006F03C6 /* RenderCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RenderCore.m; path = Graphic/RenderCore.m; sourceTree = "<group>"; };
+		CF7B773F15908129006F03C6 /* TaskManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TaskManager.h; path = Task/TaskManager.h; sourceTree = "<group>"; };
+		CF7B774015908129006F03C6 /* TaskManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TaskManager.m; path = Task/TaskManager.m; sourceTree = "<group>"; };
+		CF7B774215908F23006F03C6 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Task.h; path = Task/Task.h; sourceTree = "<group>"; };
+		CF7B774315908F23006F03C6 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Task.m; path = Task/Task.m; sourceTree = "<group>"; };
+		CF7E1DE715661A13005D58C9 /* HIFramework_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HIFramework_icon.png; sourceTree = "<group>"; };
+		CF7E1DEB15661E12005D58C9 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		CF7E1DEE15661E9A005D58C9 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		CF7E1DF015661F6B005D58C9 /* HIFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HIFramework.h; sourceTree = "<group>"; };
+		CF7E1DF115661FDD005D58C9 /* HIApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIApp.h; path = HIApp/HIApp.h; sourceTree = "<group>"; };
+		CF7E1DF215661FDD005D58C9 /* HIApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HIApp.m; path = HIApp/HIApp.m; sourceTree = "<group>"; };
+		CF7E1DF4156625C3005D58C9 /* HIFDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HIFDefines.h; path = HIApp/HIFDefines.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CF4C16F01563FE7B0078F4D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF786EB415B7BA9000099D71 /* AVFoundation.framework in Frameworks */,
+				CF30A79615AF340D00AAE45D /* AudioToolbox.framework in Frameworks */,
+				CF30A79315AF340200AAE45D /* OpenAL.framework in Frameworks */,
+				CF7E1DEF15661E9A005D58C9 /* GLKit.framework in Frameworks */,
+				CF7E1DEC15661E12005D58C9 /* OpenGLES.framework in Frameworks */,
+				CF4C16F81563FE7B0078F4D6 /* UIKit.framework in Frameworks */,
+				CF4C16FA1563FE7B0078F4D6 /* Foundation.framework in Frameworks */,
+				CF4C16FC1563FE7B0078F4D6 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CF0B5F6815BAFDEA004DBDF9 /* UIController */ = {
+			isa = PBXGroup;
+			children = (
+				CF0B5F6D15BAFF94004DBDF9 /* GUIButton.h */,
+				CF0B5F6E15BAFF94004DBDF9 /* GUIButton.m */,
+				CF0B5F7015BAFFDC004DBDF9 /* GUICheckBox.h */,
+				CF0B5F7115BAFFDC004DBDF9 /* GUICheckBox.m */,
+			);
+			name = UIController;
+			sourceTree = "<group>";
+		};
+		CF483820158E431A00529A53 /* Graphic */ = {
+			isa = PBXGroup;
+			children = (
+				CF74090B15B92B51003FF3CE /* MovieClip.h */,
+				CF74090C15B92B51003FF3CE /* MovieClip.m */,
+				CF7B773815907F79006F03C6 /* RenderCore.h */,
+				CF7B773915907F79006F03C6 /* RenderCore.m */,
+				CF4FFE79159F5B3E001C8234 /* Sprite.h */,
+				CF4FFE7A159F5B3E001C8234 /* Sprite.m */,
+				CF5495C115A1FFAB004CE6A6 /* GraphicFactory.h */,
+				CF5495C215A1FFAB004CE6A6 /* GraphicFactory.m */,
+			);
+			name = Graphic;
+			sourceTree = "<group>";
+		};
+		CF4838341593888B00529A53 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				CF4838361593890500529A53 /* TouchEvent.h */,
+				CF4838371593890500529A53 /* TouchEvent.m */,
+			);
+			name = Events;
+			sourceTree = "<group>";
+		};
+		CF4C16E81563FE7B0078F4D6 = {
+			isa = PBXGroup;
+			children = (
+				CF7E1DEA15661A20005D58C9 /* Resource */,
+				CF4C16FD1563FE7B0078F4D6 /* HIFramework */,
+				CF4C16F61563FE7B0078F4D6 /* Frameworks */,
+				CF4C16F41563FE7B0078F4D6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CF4C16F41563FE7B0078F4D6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF4C16F31563FE7B0078F4D6 /* SGJ2012.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF4C16F61563FE7B0078F4D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CF786EB315B7BA9000099D71 /* AVFoundation.framework */,
+				CF30A79515AF340D00AAE45D /* AudioToolbox.framework */,
+				CF30A79215AF340200AAE45D /* OpenAL.framework */,
+				CF7E1DEE15661E9A005D58C9 /* GLKit.framework */,
+				CF7E1DEB15661E12005D58C9 /* OpenGLES.framework */,
+				CF4C16F71563FE7B0078F4D6 /* UIKit.framework */,
+				CF4C16F91563FE7B0078F4D6 /* Foundation.framework */,
+				CF4C16FB1563FE7B0078F4D6 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF4C16FD1563FE7B0078F4D6 /* HIFramework */ = {
+			isa = PBXGroup;
+			children = (
+				CF7B773D15907FDB006F03C6 /* File */,
+				CF483820158E431A00529A53 /* Graphic */,
+				CF4838341593888B00529A53 /* Events */,
+				CF7B773E15907FE1006F03C6 /* Gui */,
+				CF7B773C15907FD5006F03C6 /* Sound */,
+				CF7B773B15907FBD006F03C6 /* Task */,
+				CF7E1DED15661E6C005D58C9 /* HIApp */,
+				CF7E1DF015661F6B005D58C9 /* HIFramework.h */,
+				CF4C16FE1563FE7B0078F4D6 /* Supporting Files */,
+				CF6584C9159B5FC500BA3AC4 /* Demo */,
+				CF4C17061563FE7B0078F4D6 /* HIAppDelegate.h */,
+				CF4C17071563FE7B0078F4D6 /* HIAppDelegate.m */,
+			);
+			path = HIFramework;
+			sourceTree = "<group>";
+		};
+		CF4C16FE1563FE7B0078F4D6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CF4C16FF1563FE7B0078F4D6 /* SGJ2012-Info.plist */,
+				CF4C17001563FE7B0078F4D6 /* InfoPlist.strings */,
+				CF4C17031563FE7B0078F4D6 /* main.m */,
+				CF4C17051563FE7B0078F4D6 /* SGJ2012-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CF6584C9159B5FC500BA3AC4 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				CF628E8F15AB4D3D00B88C1C /* TestTask.h */,
+				CF628E9015AB4D3D00B88C1C /* TestTask.m */,
+			);
+			name = Demo;
+			sourceTree = "<group>";
+		};
+		CF7B773B15907FBD006F03C6 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				CF7B773F15908129006F03C6 /* TaskManager.h */,
+				CF7B774015908129006F03C6 /* TaskManager.m */,
+				CF7B774215908F23006F03C6 /* Task.h */,
+				CF7B774315908F23006F03C6 /* Task.m */,
+			);
+			name = Task;
+			sourceTree = "<group>";
+		};
+		CF7B773C15907FD5006F03C6 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				CF786EAF15B7A8D500099D71 /* SoundManager.h */,
+				CF786EB015B7A8D500099D71 /* SoundManager.m */,
+				CF786EB715B7C2FF00099D71 /* PlayerController.h */,
+				CF786EB815B7C2FF00099D71 /* PlayerController.m */,
+			);
+			name = Sound;
+			sourceTree = "<group>";
+		};
+		CF7B773D15907FDB006F03C6 /* File */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = File;
+			sourceTree = "<group>";
+		};
+		CF7B773E15907FE1006F03C6 /* Gui */ = {
+			isa = PBXGroup;
+			children = (
+				CF0B5F6815BAFDEA004DBDF9 /* UIController */,
+				CF74380515AD8B5A007E40A8 /* UIManager.h */,
+				CF74380615AD8B5A007E40A8 /* UIManager.m */,
+				CF76B95A15AFC80D00D34DC1 /* UIWidget.h */,
+				CF76B95B15AFC80D00D34DC1 /* UIWidget.m */,
+			);
+			name = Gui;
+			sourceTree = "<group>";
+		};
+		CF7E1DEA15661A20005D58C9 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				CF786EBA15B7DE7E00099D71 /* eat.wav */,
+				CF786EB515B7BB5600099D71 /* bgm.mp3 */,
+				CF6E095A15B157C4002B3D2B /* snake.png */,
+				CF6E095815B155D5002B3D2B /* zombie.png */,
+				CF6E095515B12FEC002B3D2B /* 05.png */,
+				CF4FFE73159EEAB9001C8234 /* nackm.png */,
+				CF7E1DE715661A13005D58C9 /* HIFramework_icon.png */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		CF7E1DED15661E6C005D58C9 /* HIApp */ = {
+			isa = PBXGroup;
+			children = (
+				CF7E1DF115661FDD005D58C9 /* HIApp.h */,
+				CF7E1DF215661FDD005D58C9 /* HIApp.m */,
+				CF7E1DF4156625C3005D58C9 /* HIFDefines.h */,
+				CF4FFE76159F0B3B001C8234 /* GLController.h */,
+				CF4FFE77159F0B3B001C8234 /* GLController.m */,
+			);
+			name = HIApp;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CF4C16F21563FE7B0078F4D6 /* SGJ2012 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF4C17111563FE7B0078F4D6 /* Build configuration list for PBXNativeTarget "SGJ2012" */;
+			buildPhases = (
+				CF4C16EF1563FE7B0078F4D6 /* Sources */,
+				CF4C16F01563FE7B0078F4D6 /* Frameworks */,
+				CF4C16F11563FE7B0078F4D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SGJ2012;
+			productName = HIFramework;
+			productReference = CF4C16F31563FE7B0078F4D6 /* SGJ2012.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CF4C16EA1563FE7B0078F4D6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = CF4C16ED1563FE7B0078F4D6 /* Build configuration list for PBXProject "SGJ2012" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF4C16E81563FE7B0078F4D6;
+			productRefGroup = CF4C16F41563FE7B0078F4D6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CF4C16F21563FE7B0078F4D6 /* SGJ2012 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CF4C16F11563FE7B0078F4D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF4C17021563FE7B0078F4D6 /* InfoPlist.strings in Resources */,
+				CF4FFE74159EEAB9001C8234 /* nackm.png in Resources */,
+				CF6E095615B12FEC002B3D2B /* 05.png in Resources */,
+				CF6E095915B155D5002B3D2B /* zombie.png in Resources */,
+				CF6E095B15B157C4002B3D2B /* snake.png in Resources */,
+				CF786EB615B7BB5600099D71 /* bgm.mp3 in Resources */,
+				CF786EBB15B7DE7E00099D71 /* eat.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CF4C16EF1563FE7B0078F4D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF4C17041563FE7B0078F4D6 /* main.m in Sources */,
+				CF4C17081563FE7B0078F4D6 /* HIAppDelegate.m in Sources */,
+				CF7E1DF315661FDD005D58C9 /* HIApp.m in Sources */,
+				CF7B773A15907F79006F03C6 /* RenderCore.m in Sources */,
+				CF7B774115908129006F03C6 /* TaskManager.m in Sources */,
+				CF7B774415908F23006F03C6 /* Task.m in Sources */,
+				CF4838381593890500529A53 /* TouchEvent.m in Sources */,
+				CF4FFE78159F0B3B001C8234 /* GLController.m in Sources */,
+				CF4FFE7B159F5B3E001C8234 /* Sprite.m in Sources */,
+				CF5495C315A1FFAB004CE6A6 /* GraphicFactory.m in Sources */,
+				CF628E9115AB4D3D00B88C1C /* TestTask.m in Sources */,
+				CF74380715AD8B5A007E40A8 /* UIManager.m in Sources */,
+				CF76B95C15AFC80D00D34DC1 /* UIWidget.m in Sources */,
+				CF786EB115B7A8D500099D71 /* SoundManager.m in Sources */,
+				CF786EB915B7C2FF00099D71 /* PlayerController.m in Sources */,
+				CF74090D15B92B52003FF3CE /* MovieClip.m in Sources */,
+				CF0B5F6F15BAFF94004DBDF9 /* GUIButton.m in Sources */,
+				CF0B5F7215BAFFDC004DBDF9 /* GUICheckBox.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CF4C17001563FE7B0078F4D6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF4C17011563FE7B0078F4D6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CF4C170F1563FE7B0078F4D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CF4C17101563FE7B0078F4D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CF4C17121563FE7B0078F4D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HIFramework/SGJ2012-Prefix.pch";
+				INFOPLIST_FILE = "HIFramework/SGJ2012-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = SGJ2012;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CF4C17131563FE7B0078F4D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HIFramework/SGJ2012-Prefix.pch";
+				INFOPLIST_FILE = "HIFramework/SGJ2012-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = SGJ2012;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CF4C16ED1563FE7B0078F4D6 /* Build configuration list for PBXProject "SGJ2012" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF4C170F1563FE7B0078F4D6 /* Debug */,
+				CF4C17101563FE7B0078F4D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF4C17111563FE7B0078F4D6 /* Build configuration list for PBXNativeTarget "SGJ2012" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF4C17121563FE7B0078F4D6 /* Debug */,
+				CF4C17131563FE7B0078F4D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CF4C16EA1563FE7B0078F4D6 /* Project object */;
+}
