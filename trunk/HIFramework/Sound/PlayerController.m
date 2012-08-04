@@ -13,12 +13,12 @@
 @synthesize LOOP_TIMES;
 
 
-/* audioPlayerDidFinishPlaying:successfully: is called when a sound has finished playing. This method is NOT called if the player is stopped due to an interruption. */
-- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
+/* audioPlayerDidFinishPlaying:successfully: is called when a sound has finished playing. This method is NOT called if the Player is stopped due to an interruption. */
+- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)Player successfully:(BOOL)flag
 {
     if( self.LOOP_TIMES < 0 )
     {
-        [player play];
+        [Player play];
     }
     else if( self.LOOP_TIMES == 0 )
     {
@@ -28,7 +28,7 @@
     {
         self.LOOP_TIMES--;
         
-        [player play];
+        [Player play];
     }
 }
 
