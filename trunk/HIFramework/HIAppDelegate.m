@@ -8,7 +8,6 @@
 
 #import "HIAppDelegate.h"
 #import "GlobalWork.h"
-#import "Demo/2dTestTask.h"
 #import "../SGJ2012/TaskEndCutscene.h"
 #import "../SGj2012/TaskStartCutscene.h"
 #import "../SGJ2012/TaskTitle.h"

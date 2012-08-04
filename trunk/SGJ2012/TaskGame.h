@@ -9,10 +9,13 @@
 #import "Task.h"
 #import "HIFramework.h"
 #import "Player.h"
+#import "TimeTunnel.h"
 
 @interface TaskGame : Task
 {
-    //TODO
+    TimeTunnel* m_tunnel;
+    float m_distance;
+    
     Player* m_player;
 }
 

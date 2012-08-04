@@ -7,12 +7,10 @@
 //
 
 #import "HIFramework.h"
-#import "TimeTunnel.h"
 
 @interface TaskTitle : Task
 {
-    TimeTunnel* m_tunnel;
-    float m_distance;
+    //TODO
 }
 
 
