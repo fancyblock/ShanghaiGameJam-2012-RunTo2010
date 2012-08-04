@@ -10,6 +10,7 @@
 		393321E515CD49BC00EDA3B7 /* MemoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 393321E415CD49BC00EDA3B7 /* MemoryItem.m */; };
 		393321E915CD49D300EDA3B7 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 393321E815CD49D300EDA3B7 /* Player.m */; };
 		393321EC15CD50DC00EDA3B7 /* brown_bear.png in Resources */ = {isa = PBXBuildFile; fileRef = 393321EB15CD50DC00EDA3B7 /* brown_bear.png */; };
+		395019AD15CD864F004C4A49 /* image0.png in Resources */ = {isa = PBXBuildFile; fileRef = 395019AC15CD864F004C4A49 /* image0.png */; };
 		CF0B5F6F15BAFF94004DBDF9 /* GUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0B5F6E15BAFF94004DBDF9 /* GUIButton.m */; };
 		CF0B5F7215BAFFDC004DBDF9 /* GUICheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0B5F7115BAFFDC004DBDF9 /* GUICheckBox.m */; };
 		CF30A79315AF340200AAE45D /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF30A79215AF340200AAE45D /* OpenAL.framework */; };
@@ -57,6 +58,9 @@
 		393321E815CD49D300EDA3B7 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Player.m; path = SGJ2012/Player.m; sourceTree = "<group>"; };
 		393321EA15CD49E300EDA3B7 /* MemoryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MemoryItem.h; path = SGJ2012/MemoryItem.h; sourceTree = "<group>"; };
 		393321EB15CD50DC00EDA3B7 /* brown_bear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brown_bear.png; sourceTree = "<group>"; };
+		395019A915CD861C004C4A49 /* Bomb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Bomb.h; path = SGJ2012/Bomb.h; sourceTree = "<group>"; };
+		395019AA15CD861C004C4A49 /* Bomb.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Bomb.m; path = SGJ2012/Bomb.m; sourceTree = "<group>"; };
+		395019AC15CD864F004C4A49 /* image0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image0.png; sourceTree = "<group>"; };
 		CF0B5F6D15BAFF94004DBDF9 /* GUIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GUIButton.h; path = Gui/UIController/GUIButton.h; sourceTree = "<group>"; };
 		CF0B5F6E15BAFF94004DBDF9 /* GUIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GUIButton.m; path = Gui/UIController/GUIButton.m; sourceTree = "<group>"; };
 		CF0B5F7015BAFFDC004DBDF9 /* GUICheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GUICheckBox.h; path = Gui/UIController/GUICheckBox.h; sourceTree = "<group>"; };
@@ -248,6 +252,8 @@
 		CF7AE1F415CCB8EF00E07077 /* SGJ2012 */ = {
 			isa = PBXGroup;
 			children = (
+				395019A915CD861C004C4A49 /* Bomb.h */,
+				395019AA15CD861C004C4A49 /* Bomb.m */,
 				393321E415CD49BC00EDA3B7 /* MemoryItem.m */,
 				CF7AE1F515CCB93C00E07077 /* GlobalWork.h */,
 				393321E715CD49D300EDA3B7 /* Player.h */,
@@ -312,6 +318,7 @@
 		CF7E1DEA15661A20005D58C9 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				395019AC15CD864F004C4A49 /* image0.png */,
 				CF589AE015CD804800A6EF20 /* hit.wav */,
 				CF589ADA15CD803500A6EF20 /* BGM1.mp3 */,
 				CF589ADB15CD803500A6EF20 /* BGM2.mp3 */,
@@ -393,6 +400,7 @@
 				CF589ADE15CD803600A6EF20 /* BGM2.mp3 in Resources */,
 				CF589ADF15CD803600A6EF20 /* BGM3.mp3 in Resources */,
 				CF589AE115CD804800A6EF20 /* hit.wav in Resources */,
+				395019AD15CD864F004C4A49 /* image0.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
