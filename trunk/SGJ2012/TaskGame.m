@@ -13,10 +13,6 @@
 
 - (void)onBegin
 {
-    m_spr = [[GraphicFactory sharedInstance] CreateSprite:@"wall01.png"];
-    [m_spr SetUVFrom:CGPointMake(0, 0) to:CGPointMake(1, 1)];
-    [m_spr SetSize:CGPointMake(100, 100)];
-    
     //TODO
 }
 
@@ -32,8 +28,6 @@
 
 - (void)onDraw:(float)elapse
 {
-    [m_spr DrawAt:CGPointMake(100, 200)];
-    
     //TODO
 }
 

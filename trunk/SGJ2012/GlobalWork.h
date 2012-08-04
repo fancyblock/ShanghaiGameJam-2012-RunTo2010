@@ -11,7 +11,10 @@
 
 @interface GlobalWork : NSObject
 
+@property (nonatomic, retain)Task* _taskTitle;
+@property (nonatomic, retain)Task* _taskStartCutscene;
 @property (nonatomic, retain)Task* _taskGame;
+@property (nonatomic, retain)Task* _taskEndCutscene;
 
 + (GlobalWork*)sharedInstance;
 

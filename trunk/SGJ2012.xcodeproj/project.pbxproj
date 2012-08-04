@@ -21,6 +21,9 @@
 		CF4FFE78159F0B3B001C8234 /* GLController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4FFE77159F0B3B001C8234 /* GLController.m */; };
 		CF4FFE7B159F5B3E001C8234 /* Sprite.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4FFE7A159F5B3E001C8234 /* Sprite.m */; };
 		CF5495C315A1FFAB004CE6A6 /* GraphicFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5495C215A1FFAB004CE6A6 /* GraphicFactory.m */; };
+		CF589AAF15CCE8FF00A6EF20 /* TaskTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = CF589AAE15CCE8FF00A6EF20 /* TaskTitle.m */; };
+		CF589AB315CCE92100A6EF20 /* TaskStartCutscene.m in Sources */ = {isa = PBXBuildFile; fileRef = CF589AB215CCE92100A6EF20 /* TaskStartCutscene.m */; };
+		CF589AB615CCE93700A6EF20 /* TaskEndCutscene.m in Sources */ = {isa = PBXBuildFile; fileRef = CF589AB515CCE93700A6EF20 /* TaskEndCutscene.m */; };
 		CF74090D15B92B52003FF3CE /* MovieClip.m in Sources */ = {isa = PBXBuildFile; fileRef = CF74090C15B92B51003FF3CE /* MovieClip.m */; };
 		CF74380715AD8B5A007E40A8 /* UIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CF74380615AD8B5A007E40A8 /* UIManager.m */; };
 		CF76B95C15AFC80D00D34DC1 /* UIWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = CF76B95B15AFC80D00D34DC1 /* UIWidget.m */; };
@@ -64,6 +67,12 @@
 		CF4FFE7A159F5B3E001C8234 /* Sprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Sprite.m; path = Graphic/Sprite.m; sourceTree = "<group>"; };
 		CF5495C115A1FFAB004CE6A6 /* GraphicFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GraphicFactory.h; path = Graphic/GraphicFactory.h; sourceTree = "<group>"; };
 		CF5495C215A1FFAB004CE6A6 /* GraphicFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GraphicFactory.m; path = Graphic/GraphicFactory.m; sourceTree = "<group>"; };
+		CF589AAD15CCE8FF00A6EF20 /* TaskTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TaskTitle.h; path = SGJ2012/TaskTitle.h; sourceTree = "<group>"; };
+		CF589AAE15CCE8FF00A6EF20 /* TaskTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TaskTitle.m; path = SGJ2012/TaskTitle.m; sourceTree = "<group>"; };
+		CF589AB115CCE92100A6EF20 /* TaskStartCutscene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TaskStartCutscene.h; path = SGJ2012/TaskStartCutscene.h; sourceTree = "<group>"; };
+		CF589AB215CCE92100A6EF20 /* TaskStartCutscene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TaskStartCutscene.m; path = SGJ2012/TaskStartCutscene.m; sourceTree = "<group>"; };
+		CF589AB415CCE93700A6EF20 /* TaskEndCutscene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TaskEndCutscene.h; path = SGJ2012/TaskEndCutscene.h; sourceTree = "<group>"; };
+		CF589AB515CCE93700A6EF20 /* TaskEndCutscene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TaskEndCutscene.m; path = SGJ2012/TaskEndCutscene.m; sourceTree = "<group>"; };
 		CF74090B15B92B51003FF3CE /* MovieClip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieClip.h; path = Graphic/MovieClip.h; sourceTree = "<group>"; };
 		CF74090C15B92B51003FF3CE /* MovieClip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieClip.m; path = Graphic/MovieClip.m; sourceTree = "<group>"; };
 		CF74380515AD8B5A007E40A8 /* UIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIManager.h; path = Gui/UIManager.h; sourceTree = "<group>"; };
@@ -222,6 +231,12 @@
 				CF7AE1F615CCB93C00E07077 /* GlobalWork.m */,
 				CF7AE1F815CCBB2E00E07077 /* TaskGame.h */,
 				CF7AE1F915CCBB2E00E07077 /* TaskGame.m */,
+				CF589AAD15CCE8FF00A6EF20 /* TaskTitle.h */,
+				CF589AAE15CCE8FF00A6EF20 /* TaskTitle.m */,
+				CF589AB115CCE92100A6EF20 /* TaskStartCutscene.h */,
+				CF589AB215CCE92100A6EF20 /* TaskStartCutscene.m */,
+				CF589AB415CCE93700A6EF20 /* TaskEndCutscene.h */,
+				CF589AB515CCE93700A6EF20 /* TaskEndCutscene.m */,
 			);
 			name = SGJ2012;
 			sourceTree = "<group>";
@@ -369,6 +384,9 @@
 				CF7AE1F715CCB93C00E07077 /* GlobalWork.m in Sources */,
 				CF7AE1FA15CCBB2E00E07077 /* TaskGame.m in Sources */,
 				CF7AE1FF15CCCC5D00E07077 /* Model.m in Sources */,
+				CF589AAF15CCE8FF00A6EF20 /* TaskTitle.m in Sources */,
+				CF589AB315CCE92100A6EF20 /* TaskStartCutscene.m in Sources */,
+				CF589AB615CCE93700A6EF20 /* TaskEndCutscene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

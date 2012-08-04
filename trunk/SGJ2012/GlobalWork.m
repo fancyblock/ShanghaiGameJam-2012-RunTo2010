@@ -13,6 +13,10 @@
 static GlobalWork* m_instance = nil;
 
 @synthesize _taskGame;
+@synthesize _taskTitle;
+@synthesize _taskEndCutscene;
+@synthesize _taskStartCutscene;
+
 
 /**
  * @desc    return the singleton
