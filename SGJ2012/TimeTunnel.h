@@ -13,10 +13,7 @@
 
 @interface TimeTunnel : NSObject
 {
-    Model* m_leftWall;
-    Model* m_rightWall;
-    Model* m_ceil;
-    Model* m_floor;
+    Model* m_model;
     
     float m_curDistance;
 }

@@ -103,7 +103,7 @@ static BOOL m_safeFlag = NO;
     // set the 2d env
     [self Setup2DEnv];
     
-    m_bgColorR = 0.0f;
+    m_bgColorR = 1.0f;
     m_bgColorG = 0.0f;
     m_bgColorB = 0.0f;
 }
