@@ -8,6 +8,7 @@
 
 #import "MemoryItem.h"
 #import "Player.h"
+#include <time.h>
 
 NSDictionary* typ2Item = NULL;
 
@@ -25,6 +26,7 @@ const int length = 219;
     m_isAlive = YES;
     m_posX = posX;
     m_posY = posY;
+    m_alive = YES;
     
     return self;
 }
@@ -40,7 +42,7 @@ startPosZ:(double)posZ withSpeed:(double)speed withPlayer:(Player*) player;
     m_pos3d->y = posY;
     m_pos3d->z = posZ;
     
-    m_isAlive = YES;
+    m_alive = YES;
     m_posX = posX;
     m_posY = posY;
     m_speed = speed;
@@ -81,14 +83,25 @@ startPosZ:(double)posZ withSpeed:(double)speed withPlayer:(Player*) player;
 
 - (void)onDraw
 {
-    if( m_pos3d->z < 0)
+    if( m_pos3d->z < 0 && m_alive)
         [m_spite DrawAt:CGPointMake((m_posX + 0.5) * 1024, 768 - (m_posY + 0.5) * 768)];
+}
+
+- (double)canCollide:(double)x1 with:(double)y1 with:(double)z1 with:(double)x2 with:(double)y2 with:(double)z2
+{
+    double t_distanceSqure = (x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1) + (z2 - z1) * (z2 - z1);
+    if (sqrt(t_distanceSqure)< 0.2)
+        return YES;
+    else
+        return NO;
 }
 
 - (void)onUpdate:(double)elapse
 {
     [self projection];
     
+    srand(time(NULL));
+        
     double absZ = m_pos3d->z;
     
     if (absZ < 0)
@@ -118,13 +131,48 @@ startPosZ:(double)posZ withSpeed:(double)speed withPlayer:(Player*) player;
     }
     
    
+    if (m_bomb != NULL)
+    {
+        Point3d* t_bombPos3d = [m_bomb getPoint3d];
+        if([self canCollide:m_pos3d->x with:m_pos3d->y with:m_pos3d->z with:t_bombPos3d->x with:t_bombPos3d->y with:t_bombPos3d->z])
+        {
+            //collid with bomb!
+            m_alive = NO;
+            [m_bomb disable];
+        }
+    }
     
-    
-    
+    if(!m_alive)
+    { 
+        m_cooldownTimer += 0.0333;
+        if (m_cooldownTimer > 3)
+        {   
+            double r = random()%100;
+            double randomX = r/100;
+            double negativeFlg = random() % 2;
+            
+            if (negativeFlg != 0)
+            {
+                randomX = -randomX;
+            }
+            m_alive = YES;
+            m_pos3d->z = -20;
+            m_pos3d->x = randomX;
+            m_cooldownTimer = 0;
+        
+        }
+    }
 }
 
 - (void)onAfterOneCycle
 {}
 
-
+- (void)setBomb:(Bomb*)bomb
+{
+    m_bomb = bomb;
+}
+- (void)disable
+{
+    m_alive = NO;
+}
 @end

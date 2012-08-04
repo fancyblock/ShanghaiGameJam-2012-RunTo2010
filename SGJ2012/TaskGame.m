@@ -8,8 +8,11 @@
 
 #import "TaskGame.h"
 #import "RenderCore.h"
+#import "Bomb.h"
+
 
 #define SIDE_MOVE_SPEED 21
+
 
 @implementation TaskGame
 
@@ -25,6 +28,13 @@
     m_item = [[MemoryItem alloc] initWithType:1 andStartPosX:0 startPosY:-0.25 startPosZ:-20 withSpeed:5 withPlayer:m_player];
     [m_item setAspect:(1.3333f) andFovy:atan(10.0f * (4.0f/3))];
     [m_item onBegin];
+
+    m_bomb = [[Bomb alloc] initWithPosX:0 andPosY:-0.25 andPosZ: -2 setAlive:NO];
+    [m_bomb setAspect:1.3333f andFov:atan(10.0f * (4.0f/3))];
+    
+    [m_bomb onCreate];
+    
+    [m_item setBomb:m_bomb];
     //TODO
     
     // create the motion manager
@@ -40,6 +50,8 @@
     
     [m_player onEnd];
     
+   
+    
     [m_tunnel release];
     
     [m_motionMgr stopAccelerometerUpdates];
@@ -51,6 +63,7 @@
     m_tunnel.DISTANCE = m_distance;
     m_distance+=elapse;
     
+    [m_bomb onFrame:elapse];
     [m_item onUpdate:elapse];
     [m_player onFrame:elapse];
     
@@ -70,6 +83,8 @@
     
     [m_player onDraw:elapse];
     
+    [m_bomb onDraw];
+    
     [m_item onDraw];
 }
 
@@ -77,13 +92,20 @@
 {
     //TODO
     [m_player onTouchEvent:events];
+
     
+    [m_bomb launch:10 withX: [m_player getPositionX]];
+    
+
     return NO; 
 }
 
 - (void)onDestory
 {
     //TODO
+    
+    [m_bomb onDestroy];
+    
     [m_player onDestroy];
     
 }

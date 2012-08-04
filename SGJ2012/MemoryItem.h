@@ -8,15 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "HIFramework.h"
+#include "Point3d.h"
 
 @class Player;
-
-typedef struct Point3d
-{
-    double x;
-    double y;
-    double z;
-}Point3d;
+@class Bomb;
 
 #define ITEM_CELLPHONE @"item_cellphone.png"
 #define ITEM_DIAMOND_RING @"item_diamond_ring.png"
@@ -43,7 +38,10 @@ typedef struct Point3d
     double m_fovy;
     
     Player* m_player;
+    Bomb* m_bomb;
+    BOOL m_alive;
     
+    double m_cooldownTimer;
 }
 
 - (id)initWithType:(int)type andStartPosX: (double)posX startPosY:(double)posY;
@@ -64,5 +62,11 @@ typedef struct Point3d
 - (void)onAfterOneCycle;
 
 - (void)projection;
+
+- (void)setBomb:(Bomb*)bomb;
+
+- (void)disable;
+
+- (double)canCollide:(double)x1 with:(double)y1 with:(double)z1 with:(double)x2 with:(double)y2 with:(double)z2;
 
 @end

@@ -8,6 +8,9 @@
 
 #import "Player.h"
 
+const static int width = 155;
+const static int length = 219;
+
 @implementation Player
 
 
@@ -81,6 +84,14 @@
     //TODO   player range limitation
     
     m_posX += offset;
+    if (m_posX < width * 0.5)
+    {
+        m_posX = width * 0.5;
+    }
+    else if(m_posX > 1024 - width * 0.5)
+    {
+        m_posX = 1024 - width * 0.5;
+    }
 }
 
 // state attack
