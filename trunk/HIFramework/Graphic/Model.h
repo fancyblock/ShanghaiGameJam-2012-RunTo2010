@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "RenderCore.h"
+
 
 @interface Model : NSObject
 {
@@ -16,14 +16,23 @@
     GLushort* m_indexBuffer;
     GLfloat* m_colorBuffer;
     GLfloat* m_normalBuffer;
+    
+    int m_vertexNum;
 }
 
 @property (nonatomic, readwrite) int TEXTURE_INDEX;
 @property (nonatomic, retain) NSString* TEXTURE_NAME;
 
+@property (nonatomic, readwrite) GLfloat* VERTEX_BUFFER;
+@property (nonatomic, readwrite) GLfloat* UV_BUFFER;
+@property (nonatomic, readwrite) GLfloat* COLOR_BUFFER;
+@property (nonatomic, readwrite) GLfloat* NORMAL_BUFFER;
 
-- (id)initWithVertexSize:(int)size;
+
+- (id)initWithVertexNum:(int)num;
 
 - (void)Render;
+
+- (void)Draw;
 
 @end

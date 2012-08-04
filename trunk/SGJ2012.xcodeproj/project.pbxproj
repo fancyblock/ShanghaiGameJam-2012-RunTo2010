@@ -24,6 +24,10 @@
 		CF589AAF15CCE8FF00A6EF20 /* TaskTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = CF589AAE15CCE8FF00A6EF20 /* TaskTitle.m */; };
 		CF589AB315CCE92100A6EF20 /* TaskStartCutscene.m in Sources */ = {isa = PBXBuildFile; fileRef = CF589AB215CCE92100A6EF20 /* TaskStartCutscene.m */; };
 		CF589AB615CCE93700A6EF20 /* TaskEndCutscene.m in Sources */ = {isa = PBXBuildFile; fileRef = CF589AB515CCE93700A6EF20 /* TaskEndCutscene.m */; };
+		CF589AB915CD09C400A6EF20 /* TimeTunnel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF589AB815CD09C400A6EF20 /* TimeTunnel.m */; };
+		CF589ABB15CD0E1300A6EF20 /* floor.png in Resources */ = {isa = PBXBuildFile; fileRef = CF589ABA15CD0E1300A6EF20 /* floor.png */; };
+		CF589ABE15CD381300A6EF20 /* wall02.png in Resources */ = {isa = PBXBuildFile; fileRef = CF589ABC15CD381300A6EF20 /* wall02.png */; };
+		CF589ABF15CD381300A6EF20 /* wall03.png in Resources */ = {isa = PBXBuildFile; fileRef = CF589ABD15CD381300A6EF20 /* wall03.png */; };
 		CF74090D15B92B52003FF3CE /* MovieClip.m in Sources */ = {isa = PBXBuildFile; fileRef = CF74090C15B92B51003FF3CE /* MovieClip.m */; };
 		CF74380715AD8B5A007E40A8 /* UIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CF74380615AD8B5A007E40A8 /* UIManager.m */; };
 		CF76B95C15AFC80D00D34DC1 /* UIWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = CF76B95B15AFC80D00D34DC1 /* UIWidget.m */; };
@@ -73,6 +77,11 @@
 		CF589AB215CCE92100A6EF20 /* TaskStartCutscene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TaskStartCutscene.m; path = SGJ2012/TaskStartCutscene.m; sourceTree = "<group>"; };
 		CF589AB415CCE93700A6EF20 /* TaskEndCutscene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TaskEndCutscene.h; path = SGJ2012/TaskEndCutscene.h; sourceTree = "<group>"; };
 		CF589AB515CCE93700A6EF20 /* TaskEndCutscene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TaskEndCutscene.m; path = SGJ2012/TaskEndCutscene.m; sourceTree = "<group>"; };
+		CF589AB715CD09C400A6EF20 /* TimeTunnel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimeTunnel.h; path = SGJ2012/TimeTunnel.h; sourceTree = "<group>"; };
+		CF589AB815CD09C400A6EF20 /* TimeTunnel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimeTunnel.m; path = SGJ2012/TimeTunnel.m; sourceTree = "<group>"; };
+		CF589ABA15CD0E1300A6EF20 /* floor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = floor.png; sourceTree = "<group>"; };
+		CF589ABC15CD381300A6EF20 /* wall02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wall02.png; sourceTree = "<group>"; };
+		CF589ABD15CD381300A6EF20 /* wall03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wall03.png; sourceTree = "<group>"; };
 		CF74090B15B92B51003FF3CE /* MovieClip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieClip.h; path = Graphic/MovieClip.h; sourceTree = "<group>"; };
 		CF74090C15B92B51003FF3CE /* MovieClip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieClip.m; path = Graphic/MovieClip.m; sourceTree = "<group>"; };
 		CF74380515AD8B5A007E40A8 /* UIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIManager.h; path = Gui/UIManager.h; sourceTree = "<group>"; };
@@ -237,6 +246,8 @@
 				CF589AB215CCE92100A6EF20 /* TaskStartCutscene.m */,
 				CF589AB415CCE93700A6EF20 /* TaskEndCutscene.h */,
 				CF589AB515CCE93700A6EF20 /* TaskEndCutscene.m */,
+				CF589AB715CD09C400A6EF20 /* TimeTunnel.h */,
+				CF589AB815CD09C400A6EF20 /* TimeTunnel.m */,
 			);
 			name = SGJ2012;
 			sourceTree = "<group>";
@@ -285,6 +296,9 @@
 		CF7E1DEA15661A20005D58C9 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				CF589ABC15CD381300A6EF20 /* wall02.png */,
+				CF589ABD15CD381300A6EF20 /* wall03.png */,
+				CF589ABA15CD0E1300A6EF20 /* floor.png */,
 				CF7AE1FB15CCCC3C00E07077 /* wall01.png */,
 			);
 			name = Resource;
@@ -354,6 +368,9 @@
 			files = (
 				CF4C17021563FE7B0078F4D6 /* InfoPlist.strings in Resources */,
 				CF7AE1FC15CCCC3C00E07077 /* wall01.png in Resources */,
+				CF589ABB15CD0E1300A6EF20 /* floor.png in Resources */,
+				CF589ABE15CD381300A6EF20 /* wall02.png in Resources */,
+				CF589ABF15CD381300A6EF20 /* wall03.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +404,7 @@
 				CF589AAF15CCE8FF00A6EF20 /* TaskTitle.m in Sources */,
 				CF589AB315CCE92100A6EF20 /* TaskStartCutscene.m in Sources */,
 				CF589AB615CCE93700A6EF20 /* TaskEndCutscene.m in Sources */,
+				CF589AB915CD09C400A6EF20 /* TimeTunnel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

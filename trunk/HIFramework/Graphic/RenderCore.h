@@ -10,6 +10,7 @@
 #import "GLKit/GLKit.h"
 #import "HIFDefines.h"
 #import "Sprite.h"
+#import "Model.h"
 
 
 #define HI_OGL_VERSION  kEAGLRenderingAPIOpenGLES1
@@ -81,6 +82,8 @@
 - (BOOL)IsTextureExist:(NSString*)picName;
 - (void)AddSprite:(Sprite*)spr;
 - (TextureInfo*)GetTextureInfo:(NSString*)picName;
+
+- (void)AddModel:(Model*)model;
 
 - (void)CleanTextures;
 

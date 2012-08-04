@@ -122,7 +122,7 @@ static BOOL m_safeFlag = NO;
     glLoadIdentity();
     
     // set the clear color
-    glClearColor( 0.0f, 0.0f, 0.0f, 1 );
+    glClearColor( 1.0f, 1.0f, 1.0f, 1 );
     
     glClearDepthf( Z_DEPTH );
     
@@ -158,18 +158,21 @@ static BOOL m_safeFlag = NO;
     // set projection type
     glMatrixMode( GL_PROJECTION );
     glLoadIdentity();
-    glFrustumf( -300, 300, -200, 200, 10, 1000 );
+    float screenRatio = (float)m_viewportHeight/(float)m_viewportWidth;
+    glFrustumf( -10, 10, -10 * screenRatio, 10 * screenRatio, 1, 50 );        //[TEMP]
     
     // set the model view matrix
     glMatrixMode( GL_MODELVIEW );
     glLoadIdentity();
     
-    // set the clear color
-    glClearColor( 0.0f, 0.0f, 0.0f, 1 );
+    glHint( GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST );
     
-    glClearDepthf( 1000 );
+    // set the clear color
+    
+    glClearDepthf( 100 );
     
     glShadeModel( GL_SMOOTH );
+    
     glEnable( GL_CULL_FACE );
     
     glEnable( GL_DEPTH_TEST );
@@ -250,6 +253,9 @@ static BOOL m_safeFlag = NO;
     
     [self Setup3DEnv];
     
+    //[HACK]
+    //TODO
+    
     // draw the model
     count = [m_modelList count];
     for( i = 0; i < count; i++ )
@@ -297,6 +303,7 @@ static BOOL m_safeFlag = NO;
     m_curTextureIndex = INIT_TEXTURE;
     
     [m_renderChunks removeAllObjects];
+    [m_modelList removeAllObjects];
     
     m_curIndexOffset = 0;
     m_curVertexOffset = 0;
@@ -396,6 +403,17 @@ static BOOL m_safeFlag = NO;
     
     m_curDepth += Z_STEP;
     
+}
+
+
+/**
+ * @desc    add model
+ * @para    model
+ * @return  none
+ */
+- (void)AddModel:(Model*)model
+{
+    [m_modelList addObject:model];
 }
 
 
