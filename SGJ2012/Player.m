@@ -70,6 +70,19 @@
         
 }
 
+
+/**
+ * @desc    move to left or right
+ * @para    offset
+ * @return  none
+ */
+- (void)MoveSide:(float)offset
+{
+    //TODO   player range limitation
+    
+    m_posX += offset;
+}
+
 // state attack
 - (void)beginAttack
 {}

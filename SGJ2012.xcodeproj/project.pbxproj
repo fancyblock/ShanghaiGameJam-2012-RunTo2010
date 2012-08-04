@@ -35,6 +35,7 @@
 		CF589ADE15CD803600A6EF20 /* BGM2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CF589ADB15CD803500A6EF20 /* BGM2.mp3 */; };
 		CF589ADF15CD803600A6EF20 /* BGM3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CF589ADC15CD803500A6EF20 /* BGM3.mp3 */; };
 		CF589AE115CD804800A6EF20 /* hit.wav in Resources */ = {isa = PBXBuildFile; fileRef = CF589AE015CD804800A6EF20 /* hit.wav */; };
+		CF589AE715CD8E1100A6EF20 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF589AE615CD8E1100A6EF20 /* CoreMotion.framework */; };
 		CF74090D15B92B52003FF3CE /* MovieClip.m in Sources */ = {isa = PBXBuildFile; fileRef = CF74090C15B92B51003FF3CE /* MovieClip.m */; };
 		CF74380715AD8B5A007E40A8 /* UIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CF74380615AD8B5A007E40A8 /* UIManager.m */; };
 		CF76B95C15AFC80D00D34DC1 /* UIWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = CF76B95B15AFC80D00D34DC1 /* UIWidget.m */; };
@@ -99,6 +100,7 @@
 		CF589ADB15CD803500A6EF20 /* BGM2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BGM2.mp3; sourceTree = "<group>"; };
 		CF589ADC15CD803500A6EF20 /* BGM3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BGM3.mp3; sourceTree = "<group>"; };
 		CF589AE015CD804800A6EF20 /* hit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hit.wav; sourceTree = "<group>"; };
+		CF589AE615CD8E1100A6EF20 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		CF74090B15B92B51003FF3CE /* MovieClip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieClip.h; path = Graphic/MovieClip.h; sourceTree = "<group>"; };
 		CF74090C15B92B51003FF3CE /* MovieClip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieClip.m; path = Graphic/MovieClip.m; sourceTree = "<group>"; };
 		CF74380515AD8B5A007E40A8 /* UIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIManager.h; path = Gui/UIManager.h; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF589AE715CD8E1100A6EF20 /* CoreMotion.framework in Frameworks */,
 				CF786EB415B7BA9000099D71 /* AVFoundation.framework in Frameworks */,
 				CF30A79615AF340D00AAE45D /* AudioToolbox.framework in Frameworks */,
 				CF30A79315AF340200AAE45D /* OpenAL.framework in Frameworks */,
@@ -208,6 +211,7 @@
 		CF4C16F61563FE7B0078F4D6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CF589AE615CD8E1100A6EF20 /* CoreMotion.framework */,
 				CF786EB315B7BA9000099D71 /* AVFoundation.framework */,
 				CF30A79515AF340D00AAE45D /* AudioToolbox.framework */,
 				CF30A79215AF340200AAE45D /* OpenAL.framework */,

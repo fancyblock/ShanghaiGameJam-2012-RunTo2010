@@ -10,6 +10,7 @@
 #import "GLKit/GLKit.h"
 #import "HIFDefines.h"
 #import "GLController.h"
+#import <CoreMotion/CoreMotion.h>
 
 // app delegate
 @protocol HIAppDelegate <NSObject>
@@ -36,6 +37,7 @@
 
 @property (nonatomic, retain)GLController* viewController;
 @property (nonatomic, retain)id<HIAppDelegate> delegate;
+@property (nonatomic, readonly) UIInterfaceOrientation CUR_ORIENTATION;
 
 
 - (id)initWithOrientation:(int)orientation deviceType:(int)type withFPS:(int)fps;

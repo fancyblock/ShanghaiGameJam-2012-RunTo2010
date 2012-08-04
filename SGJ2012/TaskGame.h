@@ -11,6 +11,8 @@
 #import "Player.h"
 #import "TimeTunnel.h"
 #import "MemoryItem.h"
+#import <CoreMotion/CoreMotion.h>
+
 
 @interface TaskGame : Task
 {
@@ -19,6 +21,8 @@
     
     Player* m_player;
     MemoryItem* m_item;
+    
+    CMMotionManager* m_motionMgr;
 }
 
 @end

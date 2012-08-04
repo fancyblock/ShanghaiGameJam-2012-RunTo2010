@@ -10,10 +10,12 @@
 
 @interface GLController : GLKViewController
 {
-    //TODO 
+    UIInterfaceOrientation m_curOrientation;
 }
 
 @property (nonatomic, readwrite) UIInterfaceOrientation CUR_ORIENTATION_SIDE1;
 @property (nonatomic, readwrite) UIInterfaceOrientation CUR_ORIENTATION_SIDE2;
+
+@property (nonatomic, readonly) UIInterfaceOrientation CURRENT_ORIENTATION;
 
 @end

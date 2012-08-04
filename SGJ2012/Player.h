@@ -70,4 +70,6 @@
 
 - (double) getPositionX;
 
+- (void)MoveSide:(float)offset;
+
 @end
