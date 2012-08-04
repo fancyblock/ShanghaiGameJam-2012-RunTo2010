@@ -56,6 +56,17 @@
 
 
 /**
+ * @desc    rawDraw
+ * @para    none
+ * @return  none
+ */
+- (void)RawDraw
+{
+    [[RenderCore sharedInstance] AddSprite:self];
+}
+
+
+/**
  * @desc    draw the sprite
  * @para    none
  * @return  none
