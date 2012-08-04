@@ -81,14 +81,39 @@
 
 
 /**
- * @desc    set the distance
- * @para    distance
- * @return  none
+ * @desc    getter & setter of the distance
  */
-- (void)SetDistance:(float)distance
-{    
-    [self setUOffset:distance];
+- (void)setDISTANCE:(float)distance
+{
+    float val = distance;
+    
+    if( val > MAX_DISTANCE )
+    {
+        val = MAX_DISTANCE;
+    }
+    
+    m_curDistance = val;
+    
+    [self setUOffset:val];
+    
+    //TODO 
 }
+
+- (float)DISTANCE
+{
+    return m_curDistance;
+}
+
+
+/**
+ * @desc    return the percent of the travel
+ */
+- (float)TRAVEL_PERCENT
+{
+    return m_curDistance/MAX_DISTANCE;
+}
+
+
 
 
 //--------------------------- private functions ---------------------------

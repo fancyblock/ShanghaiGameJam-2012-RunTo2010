@@ -79,6 +79,8 @@
     frame.V2 = region.origin.y + region.size.height;
     frame.SIZE_WID = size.x;
     frame.SIZE_HEI = size.y;
+    frame.ANCHOR_X = anchor.x;
+    frame.ANCHOR_Y = anchor.y;
     
     [m_frameList addObject:frame];
     [frame release];

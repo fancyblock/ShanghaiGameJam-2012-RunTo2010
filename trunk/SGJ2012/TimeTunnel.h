@@ -9,15 +9,21 @@
 #import <Foundation/Foundation.h>
 #import "HIFramework.h"
 
+#define MAX_DISTANCE    60
+
 @interface TimeTunnel : NSObject
 {
     Model* m_leftWall;
     Model* m_rightWall;
     Model* m_ceil;
     Model* m_floor;
+    
+    float m_curDistance;
 }
 
+@property (nonatomic, readwrite) float DISTANCE;
+@property (nonatomic, readonly) float TRAVEL_PERCENT;
+
 - (void)Draw;
-- (void)SetDistance:(float)distance;
 
 @end
