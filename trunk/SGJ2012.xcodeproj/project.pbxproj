@@ -30,6 +30,10 @@
 		CF589AB915CD09C400A6EF20 /* TimeTunnel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF589AB815CD09C400A6EF20 /* TimeTunnel.m */; };
 		CF589AC915CD66FB00A6EF20 /* timetunnel.png in Resources */ = {isa = PBXBuildFile; fileRef = CF589AC815CD66FB00A6EF20 /* timetunnel.png */; };
 		CF589AD915CD779700A6EF20 /* menu01.png in Resources */ = {isa = PBXBuildFile; fileRef = CF589AD815CD779700A6EF20 /* menu01.png */; };
+		CF589ADD15CD803500A6EF20 /* BGM1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CF589ADA15CD803500A6EF20 /* BGM1.mp3 */; };
+		CF589ADE15CD803600A6EF20 /* BGM2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CF589ADB15CD803500A6EF20 /* BGM2.mp3 */; };
+		CF589ADF15CD803600A6EF20 /* BGM3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CF589ADC15CD803500A6EF20 /* BGM3.mp3 */; };
+		CF589AE115CD804800A6EF20 /* hit.wav in Resources */ = {isa = PBXBuildFile; fileRef = CF589AE015CD804800A6EF20 /* hit.wav */; };
 		CF74090D15B92B52003FF3CE /* MovieClip.m in Sources */ = {isa = PBXBuildFile; fileRef = CF74090C15B92B51003FF3CE /* MovieClip.m */; };
 		CF74380715AD8B5A007E40A8 /* UIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CF74380615AD8B5A007E40A8 /* UIManager.m */; };
 		CF76B95C15AFC80D00D34DC1 /* UIWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = CF76B95B15AFC80D00D34DC1 /* UIWidget.m */; };
@@ -87,6 +91,10 @@
 		CF589AB815CD09C400A6EF20 /* TimeTunnel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimeTunnel.m; path = SGJ2012/TimeTunnel.m; sourceTree = "<group>"; };
 		CF589AC815CD66FB00A6EF20 /* timetunnel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timetunnel.png; sourceTree = "<group>"; };
 		CF589AD815CD779700A6EF20 /* menu01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu01.png; sourceTree = "<group>"; };
+		CF589ADA15CD803500A6EF20 /* BGM1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BGM1.mp3; sourceTree = "<group>"; };
+		CF589ADB15CD803500A6EF20 /* BGM2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BGM2.mp3; sourceTree = "<group>"; };
+		CF589ADC15CD803500A6EF20 /* BGM3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BGM3.mp3; sourceTree = "<group>"; };
+		CF589AE015CD804800A6EF20 /* hit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hit.wav; sourceTree = "<group>"; };
 		CF74090B15B92B51003FF3CE /* MovieClip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieClip.h; path = Graphic/MovieClip.h; sourceTree = "<group>"; };
 		CF74090C15B92B51003FF3CE /* MovieClip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieClip.m; path = Graphic/MovieClip.m; sourceTree = "<group>"; };
 		CF74380515AD8B5A007E40A8 /* UIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIManager.h; path = Gui/UIManager.h; sourceTree = "<group>"; };
@@ -304,6 +312,10 @@
 		CF7E1DEA15661A20005D58C9 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				CF589AE015CD804800A6EF20 /* hit.wav */,
+				CF589ADA15CD803500A6EF20 /* BGM1.mp3 */,
+				CF589ADB15CD803500A6EF20 /* BGM2.mp3 */,
+				CF589ADC15CD803500A6EF20 /* BGM3.mp3 */,
 				CF589AD815CD779700A6EF20 /* menu01.png */,
 				CF589AC815CD66FB00A6EF20 /* timetunnel.png */,
 				393321EB15CD50DC00EDA3B7 /* brown_bear.png */,
@@ -377,6 +389,10 @@
 				393321EC15CD50DC00EDA3B7 /* brown_bear.png in Resources */,
 				CF589AC915CD66FB00A6EF20 /* timetunnel.png in Resources */,
 				CF589AD915CD779700A6EF20 /* menu01.png in Resources */,
+				CF589ADD15CD803500A6EF20 /* BGM1.mp3 in Resources */,
+				CF589ADE15CD803600A6EF20 /* BGM2.mp3 in Resources */,
+				CF589ADF15CD803600A6EF20 /* BGM3.mp3 in Resources */,
+				CF589AE115CD804800A6EF20 /* hit.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

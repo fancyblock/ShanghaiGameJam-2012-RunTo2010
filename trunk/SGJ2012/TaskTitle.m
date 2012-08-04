@@ -26,6 +26,13 @@
     [m_btnStart SetRegion:CGRectMake(20, 390, 512, 256)];
     
     [[UIManager sharedInstance] AddToRoot:m_btnStart];
+    
+    // init the sound
+    [GlobalWork sharedInstance]._bgm01 = [[SoundManager sharedInstance] LoadSound:@"BGM1.mp3"];
+    [GlobalWork sharedInstance]._bgm02 = [[SoundManager sharedInstance] LoadSound:@"BGM2.mp3"];
+    [GlobalWork sharedInstance]._bgm03 = [[SoundManager sharedInstance] LoadSound:@"BGM3.mp3"];
+    [GlobalWork sharedInstance]._seHit = [[SoundManager sharedInstance] LoadSound:@"hit.wav"];
+    
 }
 
 
