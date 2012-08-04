@@ -9,7 +9,6 @@
 #import "HIAppDelegate.h"
 #import "GlobalWork.h"
 #import "../SGJ2012/TaskGame.h"
-#import "../SGJ2012/2dTestTask.h"
 #import "../SGJ2012/TaskEndCutscene.h"
 #import "../SGj2012/TaskStartCutscene.h"
 #import "../SGJ2012/TaskTitle.h"
@@ -95,7 +94,7 @@
 - (void)initial
 {
     // init the application
-    [GlobalWork sharedInstance]._taskGame = [[Test2dTask alloc] init];
+    [GlobalWork sharedInstance]._taskGame = [[TaskGame alloc] init];
     [GlobalWork sharedInstance]._taskTitle = [[TaskTitle alloc] init];
     [GlobalWork sharedInstance]._taskStartCutscene = [[TaskStartCutscene alloc] init];
     [GlobalWork sharedInstance]._taskEndCutscene = [[TaskEndCutscene alloc] init];

@@ -111,7 +111,7 @@ static BOOL m_safeFlag = NO;
  */
 - (Model*)CreateModel:(NSString*)imgName withVertexCount:(int)count
 {
-    Model* model = [[Model alloc] initWithVertexSize:count];
+    Model* model = [[Model alloc] initWithVertexNum:count];
     
     int texIndex = NO_TEXTURE;
     

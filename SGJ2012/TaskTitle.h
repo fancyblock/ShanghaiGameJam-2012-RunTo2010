@@ -6,8 +6,14 @@
 //  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
 //
 
-#import "Task.h"
+#import "HIFramework.h"
+#import "TimeTunnel.h"
 
 @interface TaskTitle : Task
+{
+    TimeTunnel* m_tunnel;
+    float m_distance;
+}
+
 
 @end
