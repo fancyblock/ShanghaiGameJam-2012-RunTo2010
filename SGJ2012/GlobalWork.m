@@ -18,6 +18,7 @@ static GlobalWork* m_instance = nil;
 @synthesize _taskStartCutscene;
 
 
+
 /**
  * @desc    return the singleton
  * @para    none

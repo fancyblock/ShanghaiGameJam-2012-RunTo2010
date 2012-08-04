@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "HIApp/HIApp.h"
+#import "Player.h"
 
 @interface HIAppDelegate : UIResponder <UIApplicationDelegate>
 {
     HIApp* m_gameApp;
-    
     //TODO 
 }
 

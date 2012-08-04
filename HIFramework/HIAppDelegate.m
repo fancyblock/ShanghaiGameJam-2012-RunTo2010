@@ -8,10 +8,11 @@
 
 #import "HIAppDelegate.h"
 #import "GlobalWork.h"
-#import "../SGJ2012/TaskGame.h"
+#import "Demo/2dTestTask.h"
 #import "../SGJ2012/TaskEndCutscene.h"
 #import "../SGj2012/TaskStartCutscene.h"
 #import "../SGJ2012/TaskTitle.h"
+#import "../SGJ2012/TaskGame.h"
 
 
 
@@ -99,7 +100,7 @@
     [GlobalWork sharedInstance]._taskStartCutscene = [[TaskStartCutscene alloc] init];
     [GlobalWork sharedInstance]._taskEndCutscene = [[TaskEndCutscene alloc] init];
     
-    [[GlobalWork sharedInstance]._taskTitle Start];
+    [[GlobalWork sharedInstance]._taskGame Start];
     
 }
 

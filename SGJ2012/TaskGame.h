@@ -8,10 +8,12 @@
 
 #import "Task.h"
 #import "HIFramework.h"
+#import "Player.h"
 
 @interface TaskGame : Task
 {
     //TODO
+    Player* m_player;
 }
 
 @end
