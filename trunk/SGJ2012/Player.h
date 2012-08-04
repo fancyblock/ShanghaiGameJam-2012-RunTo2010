@@ -9,6 +9,8 @@
 #import "Task.h"
 #import "HIFramework.h"
 
+@class MemoryItem;
+
 #define invalid 0
 #define run 1
 #define attack 2
@@ -19,6 +21,7 @@
 {
     int m_currState;
     Sprite* m_PlayerSprite;
+    MovieClip* m_moveClip;
     double m_posX;
     double m_posY;
 }
@@ -62,5 +65,9 @@
 - (void) onFrame:(double)elapse;
 - (BOOL) onTouchEvent:(NSArray*)events;
 - (void) onDestroy;
+
+- (void) onContactItem:(MemoryItem*) item;
+
+- (double) getPositionX;
 
 @end

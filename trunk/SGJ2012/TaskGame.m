@@ -19,12 +19,17 @@
     m_player = [[Player alloc] initWith:512 andY: 600];
     [m_player onBegin];
     
+    m_item = [[MemoryItem alloc] initWithType:1 andStartPosX:0 startPosY:-0.25 startPosZ:-20 withSpeed:5 withPlayer:m_player];
+    [m_item setAspect:(1.3333f) andFovy:atan(10.0f * (4.0f/3))];
+    [m_item onBegin];
     //TODO
 }
 
 - (void)onEnd
 {
     //TODO
+    [m_item onEnd];
+    
     [m_player onEnd];
     
     [m_tunnel release];
@@ -35,6 +40,7 @@
     m_tunnel.DISTANCE = m_distance;
     m_distance+=elapse;
     
+    [m_item onUpdate:elapse];
     [m_player onFrame:elapse];
 }
 
@@ -43,6 +49,8 @@
     [m_tunnel Draw];
     
     [m_player onDraw:elapse];
+    
+    [m_item onDraw];
 }
 
 - (BOOL)onTouchEvent:(NSArray*)events

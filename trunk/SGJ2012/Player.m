@@ -37,6 +37,13 @@
     [m_PlayerSprite SetUVFrom:CGPointMake(0, 0) to:CGPointMake(1, 1)];
     [m_PlayerSprite SetSize:CGPointMake(155, 219)];
     [m_PlayerSprite SetAnchor:CGPointMake(0.5, 0.5)];
+    
+    m_moveClip = [[GraphicFactory sharedInstance] CreateMovieClip:@"image0.png" withInterval:0.06];
+    [m_moveClip AddFrame:CGRectMake(0, 0, 0.59375, 0.234375) withAnchor:(CGPointMake(0.5, 0.3)) withSize:(CGPointMake(152, 240))];
+     [m_moveClip AddFrame:CGRectMake(0, 0.236328, 0.59375, 0.234375) withAnchor:(CGPointMake(0.5, 0.3)) withSize:(CGPointMake(152, 240))];
+     [m_moveClip AddFrame:CGRectMake(0, 0.472656, 0.59375, 0.234375) withAnchor:(CGPointMake(0.5, 0.3)) withSize:(CGPointMake(152, 240))];
+     [m_moveClip AddFrame:CGRectMake(0, 0.708984, 0.59375, 0.234375) withAnchor:(CGPointMake(0.5, 0.3)) withSize:(CGPointMake(152, 240))];
+    
 }
 - (void)endRun
 {}
@@ -165,6 +172,8 @@
 
 - (void)onFrame:(double)elapse
 {
+    [m_moveClip Update:elapse];
+    
     switch(m_currState)
     {
         case invalid:
@@ -198,8 +207,9 @@
 
 - (void)onDraw:(double)elapse
 {
-    [m_PlayerSprite DrawAt:CGPointMake(m_posX, m_posY)];
-    
+    //[m_PlayerSprite DrawAt:CGPointMake(m_posX, m_posY)];
+    [m_moveClip Draw];
+    [m_moveClip SetPosition:CGPointMake(m_posX, m_posY)];
 }
 
 - (BOOL)onTouchEvent:(NSArray*)events
@@ -236,4 +246,13 @@
 
 - (void)onDestroy
 {}
+
+- (void)onContactItem:(MemoryItem*) item
+{}
+
+- (double)getPositionX
+{
+    return m_posX;
+    
+}
 @end
