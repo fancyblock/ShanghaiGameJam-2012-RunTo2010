@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "HIFramework.h"
 
+@class Player;
+
 typedef struct Point3d
 {
     double x;
@@ -34,15 +36,20 @@ typedef struct Point3d
     int m_cycleCount;
     BOOL m_isAlive;
     
+    double m_speed;
+    
     // for projection
     double m_aspect;
     double m_fovy;
+    
+    Player* m_player;
+    
 }
 
 - (id)initWithType:(int)type andStartPosX: (double)posX startPosY:(double)posY;
 
 - (id)initWithType:(int)type andStartPosX:(double)posX startPosY:(double)posY
-         startPosZ:(double)posZ;
+         startPosZ:(double)posZ withSpeed:(double)speed withPlayer:(Player*)player;
 
 - (void)setAspect:(double) aspect andFovy:(double)fovy;
 

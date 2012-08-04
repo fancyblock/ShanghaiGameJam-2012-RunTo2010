@@ -10,6 +10,7 @@
 #import "HIFramework.h"
 #import "Player.h"
 #import "TimeTunnel.h"
+#import "MemoryItem.h"
 
 @interface TaskGame : Task
 {
@@ -17,6 +18,7 @@
     float m_distance;
     
     Player* m_player;
+    MemoryItem* m_item;
 }
 
 @end
