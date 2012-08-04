@@ -7,7 +7,11 @@
 //
 
 #import "Task.h"
+#import "HIFramework.h"
 
 @interface TaskGame : Task
+{
+    Sprite* m_spr;
+}
 
 @end

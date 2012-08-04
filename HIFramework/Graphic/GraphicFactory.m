@@ -103,7 +103,27 @@ static BOOL m_safeFlag = NO;
 }
 
 
-//TODO 
+/**
+ * @desc    create model
+ * @para    texture name
+ * @para    count   vertex count
+ * @return  model
+ */
+- (Model*)CreateModel:(NSString*)imgName withVertexCount:(int)count
+{
+    Model* model = [[Model alloc] initWithVertexSize:count];
+    
+    int texIndex = NO_TEXTURE;
+    
+    [self createTexture:imgName];
+    
+    texIndex = [[RenderCore sharedInstance] GetTextureInfo:imgName].INDEX;
+    
+    model.TEXTURE_INDEX = texIndex;
+    model.TEXTURE_NAME = imgName;
+    
+    return model;
+}
 
 
 //------------------------------------------ private function ------------------------------------------

@@ -7,10 +7,7 @@
 //
 
 #import "RenderCore.h"
-
-#define COORD_PER_VERTEX    3
-#define COORD_PER_UV        2
-#define COORD_PER_COLOR     4
+#import "Model.h"
 
 #define MAX_VERTEX_NUM      1024
 #define MAX_INDEX_NUM       2048
@@ -100,22 +97,25 @@ static BOOL m_safeFlag = NO;
     // set view port
     glViewport( 0, 0, size.width, size.height );
     
+    m_viewportWidth = size.width;
+    m_viewportHeight = size.height;
+    
     // set the 2d env
-    [self Setup2DEnv:size];
+    [self Setup2DEnv];
 }
 
 
 /**
  * @desc    setup 2d env
- * @para    size
+ * @para    none
  * @return  none
  */
-- (void)Setup2DEnv:(CGSize)size
+- (void)Setup2DEnv
 {
     // set projection type
     glMatrixMode( GL_PROJECTION );
     glLoadIdentity();
-    glOrthof( 0, size.width, size.height, 0, 0, Z_DEPTH );
+    glOrthof( 0, m_viewportWidth, m_viewportHeight, 0, 0, Z_DEPTH );
     
     // reset model view matrix
     glMatrixMode( GL_MODELVIEW );
@@ -208,6 +208,10 @@ static BOOL m_safeFlag = NO;
     
     // init render info
     m_renderChunks = [[NSMutableArray alloc] init];
+    
+    // init the model list
+    m_modelList = [[NSMutableArray alloc] init];
+    
 }
 
 
@@ -237,18 +241,41 @@ static BOOL m_safeFlag = NO;
  */
 - (void)Render
 {
+    int i;
+    int count;
+    
     glClear( GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT );
+    
+    //----------- 3D render -----------
+    
+    [self Setup3DEnv];
+    
+    // draw the model
+    count = [m_modelList count];
+    for( i = 0; i < count; i++ )
+    {
+        Model* model = [m_modelList objectAtIndex:i];
+        
+        glBindTexture( GL_TEXTURE_2D, m_textures[model.TEXTURE_INDEX] );
+        [model Render];
+    }
+    
+    //----------- 2D render ----------- 
+    
+    [self Setup2DEnv];
+    
+    glClear( GL_DEPTH_BUFFER_BIT );
     
     // set buffer
     glVertexPointer( COORD_PER_VERTEX, GL_FLOAT, 0, m_vertexBuffer );
     glTexCoordPointer( COORD_PER_UV, GL_FLOAT, 0, m_textCoordBuffer );
     glColorPointer( COORD_PER_COLOR, GL_FLOAT, 0, m_colorBuffer );
     
-    int count = [m_renderChunks count];
+    count = [m_renderChunks count];
     RenderChunk* chunk = nil;
     
     // draw all the chunks
-    for( int i = 0; i < count; i++ )
+    for( i = 0; i < count; i++ )
     {
         chunk = [m_renderChunks objectAtIndex:i];
         
