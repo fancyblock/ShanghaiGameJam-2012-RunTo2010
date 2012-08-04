@@ -46,6 +46,7 @@
 @property (nonatomic, retain) NSString* TEXTURE_NAME;
 
 
+- (void)RawDraw;
 - (void)Draw;
 - (void)DrawAt:(CGPoint)pt;
 - (void)DrawAt:(CGPoint)pt withSize:(CGPoint)size;

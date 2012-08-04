@@ -64,6 +64,8 @@
 - (void)Destory;
 - (void)Render;
 - (void)Clear;
+- (void)Setup2DEnv:(CGSize)size;
+- (void)Setup3DEnv;
 
 - (BOOL)CreateTexture:(NSString*)picName;
 - (BOOL)IsTextureExist:(NSString*)picName;

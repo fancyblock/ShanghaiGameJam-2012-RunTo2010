@@ -18,22 +18,17 @@
 		CF4C17021563FE7B0078F4D6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF4C17001563FE7B0078F4D6 /* InfoPlist.strings */; };
 		CF4C17041563FE7B0078F4D6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4C17031563FE7B0078F4D6 /* main.m */; };
 		CF4C17081563FE7B0078F4D6 /* HIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4C17071563FE7B0078F4D6 /* HIAppDelegate.m */; };
-		CF4FFE74159EEAB9001C8234 /* nackm.png in Resources */ = {isa = PBXBuildFile; fileRef = CF4FFE73159EEAB9001C8234 /* nackm.png */; };
 		CF4FFE78159F0B3B001C8234 /* GLController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4FFE77159F0B3B001C8234 /* GLController.m */; };
 		CF4FFE7B159F5B3E001C8234 /* Sprite.m in Sources */ = {isa = PBXBuildFile; fileRef = CF4FFE7A159F5B3E001C8234 /* Sprite.m */; };
 		CF5495C315A1FFAB004CE6A6 /* GraphicFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5495C215A1FFAB004CE6A6 /* GraphicFactory.m */; };
-		CF628E9115AB4D3D00B88C1C /* TestTask.m in Sources */ = {isa = PBXBuildFile; fileRef = CF628E9015AB4D3D00B88C1C /* TestTask.m */; };
-		CF6E095615B12FEC002B3D2B /* 05.png in Resources */ = {isa = PBXBuildFile; fileRef = CF6E095515B12FEC002B3D2B /* 05.png */; };
-		CF6E095915B155D5002B3D2B /* zombie.png in Resources */ = {isa = PBXBuildFile; fileRef = CF6E095815B155D5002B3D2B /* zombie.png */; };
-		CF6E095B15B157C4002B3D2B /* snake.png in Resources */ = {isa = PBXBuildFile; fileRef = CF6E095A15B157C4002B3D2B /* snake.png */; };
 		CF74090D15B92B52003FF3CE /* MovieClip.m in Sources */ = {isa = PBXBuildFile; fileRef = CF74090C15B92B51003FF3CE /* MovieClip.m */; };
 		CF74380715AD8B5A007E40A8 /* UIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CF74380615AD8B5A007E40A8 /* UIManager.m */; };
 		CF76B95C15AFC80D00D34DC1 /* UIWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = CF76B95B15AFC80D00D34DC1 /* UIWidget.m */; };
 		CF786EB115B7A8D500099D71 /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CF786EB015B7A8D500099D71 /* SoundManager.m */; };
 		CF786EB415B7BA9000099D71 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF786EB315B7BA9000099D71 /* AVFoundation.framework */; };
-		CF786EB615B7BB5600099D71 /* bgm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CF786EB515B7BB5600099D71 /* bgm.mp3 */; };
 		CF786EB915B7C2FF00099D71 /* PlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF786EB815B7C2FF00099D71 /* PlayerController.m */; };
-		CF786EBB15B7DE7E00099D71 /* eat.wav in Resources */ = {isa = PBXBuildFile; fileRef = CF786EBA15B7DE7E00099D71 /* eat.wav */; };
+		CF7AE1F715CCB93C00E07077 /* GlobalWork.m in Sources */ = {isa = PBXBuildFile; fileRef = CF7AE1F615CCB93C00E07077 /* GlobalWork.m */; };
+		CF7AE1FA15CCBB2E00E07077 /* TaskGame.m in Sources */ = {isa = PBXBuildFile; fileRef = CF7AE1F915CCBB2E00E07077 /* TaskGame.m */; };
 		CF7B773A15907F79006F03C6 /* RenderCore.m in Sources */ = {isa = PBXBuildFile; fileRef = CF7B773915907F79006F03C6 /* RenderCore.m */; };
 		CF7B774115908129006F03C6 /* TaskManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CF7B774015908129006F03C6 /* TaskManager.m */; };
 		CF7B774415908F23006F03C6 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = CF7B774315908F23006F03C6 /* Task.m */; };
@@ -61,18 +56,12 @@
 		CF4C17051563FE7B0078F4D6 /* SGJ2012-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SGJ2012-Prefix.pch"; sourceTree = "<group>"; };
 		CF4C17061563FE7B0078F4D6 /* HIAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HIAppDelegate.h; sourceTree = "<group>"; };
 		CF4C17071563FE7B0078F4D6 /* HIAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HIAppDelegate.m; sourceTree = "<group>"; };
-		CF4FFE73159EEAB9001C8234 /* nackm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nackm.png; sourceTree = "<group>"; };
 		CF4FFE76159F0B3B001C8234 /* GLController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLController.h; path = HIApp/GLController.h; sourceTree = "<group>"; };
 		CF4FFE77159F0B3B001C8234 /* GLController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GLController.m; path = HIApp/GLController.m; sourceTree = "<group>"; };
 		CF4FFE79159F5B3E001C8234 /* Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Sprite.h; path = Graphic/Sprite.h; sourceTree = "<group>"; };
 		CF4FFE7A159F5B3E001C8234 /* Sprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Sprite.m; path = Graphic/Sprite.m; sourceTree = "<group>"; };
 		CF5495C115A1FFAB004CE6A6 /* GraphicFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GraphicFactory.h; path = Graphic/GraphicFactory.h; sourceTree = "<group>"; };
 		CF5495C215A1FFAB004CE6A6 /* GraphicFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GraphicFactory.m; path = Graphic/GraphicFactory.m; sourceTree = "<group>"; };
-		CF628E8F15AB4D3D00B88C1C /* TestTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestTask.h; path = Demo/TestTask.h; sourceTree = "<group>"; };
-		CF628E9015AB4D3D00B88C1C /* TestTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestTask.m; path = Demo/TestTask.m; sourceTree = "<group>"; };
-		CF6E095515B12FEC002B3D2B /* 05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 05.png; sourceTree = "<group>"; };
-		CF6E095815B155D5002B3D2B /* zombie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zombie.png; sourceTree = "<group>"; };
-		CF6E095A15B157C4002B3D2B /* snake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snake.png; sourceTree = "<group>"; };
 		CF74090B15B92B51003FF3CE /* MovieClip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieClip.h; path = Graphic/MovieClip.h; sourceTree = "<group>"; };
 		CF74090C15B92B51003FF3CE /* MovieClip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieClip.m; path = Graphic/MovieClip.m; sourceTree = "<group>"; };
 		CF74380515AD8B5A007E40A8 /* UIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIManager.h; path = Gui/UIManager.h; sourceTree = "<group>"; };
@@ -82,17 +71,18 @@
 		CF786EAF15B7A8D500099D71 /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoundManager.h; path = Sound/SoundManager.h; sourceTree = "<group>"; };
 		CF786EB015B7A8D500099D71 /* SoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoundManager.m; path = Sound/SoundManager.m; sourceTree = "<group>"; };
 		CF786EB315B7BA9000099D71 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		CF786EB515B7BB5600099D71 /* bgm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgm.mp3; sourceTree = "<group>"; };
 		CF786EB715B7C2FF00099D71 /* PlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerController.h; path = Sound/PlayerController.h; sourceTree = "<group>"; };
 		CF786EB815B7C2FF00099D71 /* PlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayerController.m; path = Sound/PlayerController.m; sourceTree = "<group>"; };
-		CF786EBA15B7DE7E00099D71 /* eat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = eat.wav; sourceTree = "<group>"; };
+		CF7AE1F515CCB93C00E07077 /* GlobalWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GlobalWork.h; path = SGJ2012/GlobalWork.h; sourceTree = "<group>"; };
+		CF7AE1F615CCB93C00E07077 /* GlobalWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GlobalWork.m; path = SGJ2012/GlobalWork.m; sourceTree = "<group>"; };
+		CF7AE1F815CCBB2E00E07077 /* TaskGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TaskGame.h; path = SGJ2012/TaskGame.h; sourceTree = "<group>"; };
+		CF7AE1F915CCBB2E00E07077 /* TaskGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TaskGame.m; path = SGJ2012/TaskGame.m; sourceTree = "<group>"; };
 		CF7B773815907F79006F03C6 /* RenderCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RenderCore.h; path = Graphic/RenderCore.h; sourceTree = "<group>"; };
 		CF7B773915907F79006F03C6 /* RenderCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RenderCore.m; path = Graphic/RenderCore.m; sourceTree = "<group>"; };
 		CF7B773F15908129006F03C6 /* TaskManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TaskManager.h; path = Task/TaskManager.h; sourceTree = "<group>"; };
 		CF7B774015908129006F03C6 /* TaskManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TaskManager.m; path = Task/TaskManager.m; sourceTree = "<group>"; };
 		CF7B774215908F23006F03C6 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Task.h; path = Task/Task.h; sourceTree = "<group>"; };
 		CF7B774315908F23006F03C6 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Task.m; path = Task/Task.m; sourceTree = "<group>"; };
-		CF7E1DE715661A13005D58C9 /* HIFramework_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HIFramework_icon.png; sourceTree = "<group>"; };
 		CF7E1DEB15661E12005D58C9 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		CF7E1DEE15661E9A005D58C9 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		CF7E1DF015661F6B005D58C9 /* HIFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HIFramework.h; sourceTree = "<group>"; };
@@ -158,6 +148,7 @@
 		CF4C16E81563FE7B0078F4D6 = {
 			isa = PBXGroup;
 			children = (
+				CF7AE1F415CCB8EF00E07077 /* SGJ2012 */,
 				CF7E1DEA15661A20005D58C9 /* Resource */,
 				CF4C16FD1563FE7B0078F4D6 /* HIFramework */,
 				CF4C16F61563FE7B0078F4D6 /* Frameworks */,
@@ -200,7 +191,6 @@
 				CF7E1DED15661E6C005D58C9 /* HIApp */,
 				CF7E1DF015661F6B005D58C9 /* HIFramework.h */,
 				CF4C16FE1563FE7B0078F4D6 /* Supporting Files */,
-				CF6584C9159B5FC500BA3AC4 /* Demo */,
 				CF4C17061563FE7B0078F4D6 /* HIAppDelegate.h */,
 				CF4C17071563FE7B0078F4D6 /* HIAppDelegate.m */,
 			);
@@ -218,13 +208,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		CF6584C9159B5FC500BA3AC4 /* Demo */ = {
+		CF7AE1F415CCB8EF00E07077 /* SGJ2012 */ = {
 			isa = PBXGroup;
 			children = (
-				CF628E8F15AB4D3D00B88C1C /* TestTask.h */,
-				CF628E9015AB4D3D00B88C1C /* TestTask.m */,
+				CF7AE1F515CCB93C00E07077 /* GlobalWork.h */,
+				CF7AE1F615CCB93C00E07077 /* GlobalWork.m */,
+				CF7AE1F815CCBB2E00E07077 /* TaskGame.h */,
+				CF7AE1F915CCBB2E00E07077 /* TaskGame.m */,
 			);
-			name = Demo;
+			name = SGJ2012;
 			sourceTree = "<group>";
 		};
 		CF7B773B15907FBD006F03C6 /* Task */ = {
@@ -271,13 +263,6 @@
 		CF7E1DEA15661A20005D58C9 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				CF786EBA15B7DE7E00099D71 /* eat.wav */,
-				CF786EB515B7BB5600099D71 /* bgm.mp3 */,
-				CF6E095A15B157C4002B3D2B /* snake.png */,
-				CF6E095815B155D5002B3D2B /* zombie.png */,
-				CF6E095515B12FEC002B3D2B /* 05.png */,
-				CF4FFE73159EEAB9001C8234 /* nackm.png */,
-				CF7E1DE715661A13005D58C9 /* HIFramework_icon.png */,
 			);
 			name = Resource;
 			sourceTree = "<group>";
@@ -345,12 +330,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF4C17021563FE7B0078F4D6 /* InfoPlist.strings in Resources */,
-				CF4FFE74159EEAB9001C8234 /* nackm.png in Resources */,
-				CF6E095615B12FEC002B3D2B /* 05.png in Resources */,
-				CF6E095915B155D5002B3D2B /* zombie.png in Resources */,
-				CF6E095B15B157C4002B3D2B /* snake.png in Resources */,
-				CF786EB615B7BB5600099D71 /* bgm.mp3 in Resources */,
-				CF786EBB15B7DE7E00099D71 /* eat.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,7 +350,6 @@
 				CF4FFE78159F0B3B001C8234 /* GLController.m in Sources */,
 				CF4FFE7B159F5B3E001C8234 /* Sprite.m in Sources */,
 				CF5495C315A1FFAB004CE6A6 /* GraphicFactory.m in Sources */,
-				CF628E9115AB4D3D00B88C1C /* TestTask.m in Sources */,
 				CF74380715AD8B5A007E40A8 /* UIManager.m in Sources */,
 				CF76B95C15AFC80D00D34DC1 /* UIWidget.m in Sources */,
 				CF786EB115B7A8D500099D71 /* SoundManager.m in Sources */,
@@ -379,6 +357,8 @@
 				CF74090D15B92B52003FF3CE /* MovieClip.m in Sources */,
 				CF0B5F6F15BAFF94004DBDF9 /* GUIButton.m in Sources */,
 				CF0B5F7215BAFFDC004DBDF9 /* GUICheckBox.m in Sources */,
+				CF7AE1F715CCB93C00E07077 /* GlobalWork.m in Sources */,
+				CF7AE1FA15CCBB2E00E07077 /* TaskGame.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

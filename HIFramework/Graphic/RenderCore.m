@@ -100,6 +100,18 @@ static BOOL m_safeFlag = NO;
     // set view port
     glViewport( 0, 0, size.width, size.height );
     
+    // set the 2d env
+    [self Setup2DEnv:size];
+}
+
+
+/**
+ * @desc    setup 2d env
+ * @para    size
+ * @return  none
+ */
+- (void)Setup2DEnv:(CGSize)size
+{
     // set projection type
     glMatrixMode( GL_PROJECTION );
     glLoadIdentity();
@@ -133,7 +145,45 @@ static BOOL m_safeFlag = NO;
     glEnableClientState( GL_COLOR_ARRAY );
     
     glActiveTexture( GL_TEXTURE0 );
+}
+
+
+/**
+ * @desc    setup 3d env
+ * @para    none
+ * @return  none
+ */
+- (void)Setup3DEnv
+{
+    // set projection type
+    glMatrixMode( GL_PROJECTION );
+    glLoadIdentity();
+    glFrustumf( -300, 300, -200, 200, 10, 1000 );
     
+    // set the model view matrix
+    glMatrixMode( GL_MODELVIEW );
+    glLoadIdentity();
+    
+    // set the clear color
+    glClearColor( 0.0f, 0.0f, 0.0f, 1 );
+    
+    glClearDepthf( 1000 );
+    
+    glShadeModel( GL_SMOOTH );
+    glEnable( GL_CULL_FACE );
+    
+    glEnable( GL_DEPTH_TEST );
+    glEnable( GL_TEXTURE_2D );
+    glEnable( GL_BLEND );
+    glEnable( GL_ALPHA_TEST );
+    
+    glBlendFunc( GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA );
+    
+    glEnableClientState( GL_VERTEX_ARRAY );
+    glEnableClientState( GL_TEXTURE_COORD_ARRAY );
+    glEnableClientState( GL_COLOR_ARRAY );
+    
+    glActiveTexture( GL_TEXTURE0 );
 }
 
 
@@ -158,7 +208,6 @@ static BOOL m_safeFlag = NO;
     
     // init render info
     m_renderChunks = [[NSMutableArray alloc] init];
-    //TODO 
 }
 
 

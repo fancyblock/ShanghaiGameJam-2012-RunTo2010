@@ -7,8 +7,14 @@
 //
 
 #import "HIAppDelegate.h"
-#import "Demo/TestTask.h"
+#import "GlobalWork.h"
+#import "../SGJ2012/TaskGame.h"
 
+@interface HIAppDelegate(priate)
+
+- (void)initial;
+
+@end
 
 @implementation HIAppDelegate
 
@@ -28,12 +34,9 @@
     // Override point for customization after application launch.
     
     // create the game app
-    m_gameApp = [[HIApp alloc] initWithOrientation:ORIENTATION_PORTRAIT deviceType:DEVICE_IPHONE withFPS:30];
+    m_gameApp = [[HIApp alloc] initWithOrientation:ORIENTATION_LANDSCAPE deviceType:DEVICE_IPAD withFPS:30];
     
-    // init the application
-    TestTask* testTask = [[TestTask alloc] init];
-    [testTask Start];
-    [testTask release];
+    [self initial];
     
     self.window.rootViewController = m_gameApp.viewController;
     [self.window makeKeyAndVisible];
@@ -82,5 +85,15 @@
     [m_gameApp release];
 }
 
+
+- (void)initial
+{
+    // init the application
+    [GlobalWork sharedInstance]._taskGame = [[TaskGame alloc] init];
+    //TODO
+    
+    [[GlobalWork sharedInstance]._taskGame Start];
+    
+}
 
 @end
