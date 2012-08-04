@@ -7,19 +7,34 @@
 //
 
 #import "TaskTitle.h"
+#import "GlobalWork.h"
 
 @implementation TaskTitle
 
 
 - (void)onBegin
 {
-    //TODO
+    m_bg = [[GraphicFactory sharedInstance] CreateSprite:@"menu01.png"];
+    [m_bg SetUVFrom:CGPointMake(0, 0) to:CGPointMake(1.0f, 0.75f)];
+    [m_bg SetSize:CGPointMake(1024, 768)];
+    
+    m_btnStart = [[GUIButton alloc] initWithRes:@"menu01.png"];
+    [m_btnStart SetCallback:self];
+    [m_btnStart SetUpUVFrom:CGPointMake(0.0, 0.755f) to:CGPointMake( 0.5f, 0.995f)];
+    [m_btnStart SetDownUVFrom:CGPointMake(0.5f, 0.755f) to:CGPointMake(0.995f, 0.995f)];
+    [m_btnStart SetDisableUVFrom:CGPointMake(0.5f, 0.755f) to:CGPointMake(0.995f, 0.995f)];
+    [m_btnStart SetRegion:CGRectMake(20, 390, 512, 256)];
+    
+    [[UIManager sharedInstance] AddToRoot:m_btnStart];
 }
 
 
 - (void)onEnd
 {
-    //TODO 
+    [m_bg release];
+    
+    [m_btnStart SetParent:nil];
+    [m_btnStart release];
 }
 
 
@@ -31,7 +46,7 @@
 
 - (void)onDraw:(float)elapse
 {
-    //TODO
+    [m_bg DrawAt:CGPointMake(0, 0)];
 }
 
 
@@ -45,6 +60,20 @@
 {
     //TODO
 }
+
+
+- (void)onButtonClick:(GUIButton*)btn
+{
+    if( btn == m_btnStart )
+    {
+        [self Stop];
+        [[GlobalWork sharedInstance]._taskGame Start];
+    }
+}
+
+- (void)onButtonDown:(GUIButton*)btn{};
+
+- (void)onButtonUp:(GUIButton*)btn{};
 
 
 @end

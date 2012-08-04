@@ -233,7 +233,10 @@
  */
 - (void)RemoveChild:(UIWidget*)child
 {
-    [child SetParent:nil];
+    if( [m_children containsObject:child] == YES )
+    {
+        [m_children removeObject:child];
+    }
 }
 
 
@@ -249,7 +252,7 @@
 // judge if this point is in widget's area or not
 - (BOOL)isInArea:(CGPoint)point
 {
-    if( point.x >= m_screenY && point.x <= ( m_screenX + m_width ) &&
+    if( point.x >= m_screenX && point.x <= ( m_screenX + m_width ) &&
         point.y >= m_screenY && point.y <= ( m_screenY + m_height ) )
     {
         return YES;

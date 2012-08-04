@@ -99,7 +99,7 @@
     [GlobalWork sharedInstance]._taskStartCutscene = [[TaskStartCutscene alloc] init];
     [GlobalWork sharedInstance]._taskEndCutscene = [[TaskEndCutscene alloc] init];
     
-    [[GlobalWork sharedInstance]._taskGame Start];
+    [[GlobalWork sharedInstance]._taskTitle Start];
     
 }
 
