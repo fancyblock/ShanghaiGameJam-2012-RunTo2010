@@ -8,9 +8,10 @@
 
 #import "HIFramework.h"
 
-@interface TaskTitle : Task
+@interface TaskTitle : Task<IButtonCallback>
 {
-    //TODO
+    GUIButton* m_btnStart;
+    Sprite* m_bg;
 }
 
 
