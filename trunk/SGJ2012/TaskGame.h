@@ -11,7 +11,12 @@
 #import "Player.h"
 #import "TimeTunnel.h"
 #import "MemoryItem.h"
+
+//#import "Bomb.h"
+@class  Bomb;
+
 #import <CoreMotion/CoreMotion.h>
+
 
 
 @interface TaskGame : Task
@@ -20,9 +25,15 @@
     float m_distance;
     
     Player* m_player;
+    
     MemoryItem* m_item;
+
+    
+    Bomb* m_bomb;
+
     
     CMMotionManager* m_motionMgr;
+
 }
 
 @end
