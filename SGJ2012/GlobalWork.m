@@ -17,6 +17,11 @@ static GlobalWork* m_instance = nil;
 @synthesize _taskEndCutscene;
 @synthesize _taskStartCutscene;
 
+@synthesize _bgm01;
+@synthesize _bgm02;
+@synthesize _bgm03;
+@synthesize _seHit;
+
 
 
 /**

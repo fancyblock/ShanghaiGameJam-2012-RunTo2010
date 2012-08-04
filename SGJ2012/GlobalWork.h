@@ -16,6 +16,13 @@
 @property (nonatomic, retain)Task* _taskGame;
 @property (nonatomic, retain)Task* _taskEndCutscene;
 
+@property (nonatomic, readwrite) int _bgm01;
+@property (nonatomic, readwrite) int _bgm02;
+@property (nonatomic, readwrite) int _bgm03;
+
+@property (nonatomic, readwrite) int _seHit;
+//TODO
+
 + (GlobalWork*)sharedInstance;
 
 @end
