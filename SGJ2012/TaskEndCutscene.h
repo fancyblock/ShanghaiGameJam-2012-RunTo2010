@@ -1,5 +1,5 @@
 //
-//  TaskGame.h
+//  TaskEndCutscene.h
 //  SGJ2012
 //
 //  Created by He JiaBin on 12-8-4.
@@ -7,11 +7,7 @@
 //
 
 #import "Task.h"
-#import "HIFramework.h"
 
-@interface TaskGame : Task
-{
-    //TODO
-}
+@interface TaskEndCutscene : Task
 
 @end

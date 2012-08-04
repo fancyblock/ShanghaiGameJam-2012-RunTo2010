@@ -9,6 +9,10 @@
 #import "HIAppDelegate.h"
 #import "GlobalWork.h"
 #import "../SGJ2012/TaskGame.h"
+#import "../SGJ2012/TaskEndCutscene.h"
+#import "../SGj2012/TaskStartCutscene.h"
+#import "../SGJ2012/TaskTitle.h"
+
 
 @interface HIAppDelegate(priate)
 
@@ -90,9 +94,11 @@
 {
     // init the application
     [GlobalWork sharedInstance]._taskGame = [[TaskGame alloc] init];
-    //TODO
+    [GlobalWork sharedInstance]._taskTitle = [[TaskTitle alloc] init];
+    [GlobalWork sharedInstance]._taskStartCutscene = [[TaskStartCutscene alloc] init];
+    [GlobalWork sharedInstance]._taskEndCutscene = [[TaskEndCutscene alloc] init];
     
-    [[GlobalWork sharedInstance]._taskGame Start];
+    [[GlobalWork sharedInstance]._taskTitle Start];
     
 }
 
