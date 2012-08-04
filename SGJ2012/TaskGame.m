@@ -32,7 +32,7 @@
 
 - (void)onFrame:(float)elapse
 {
-    [m_tunnel SetDistance:m_distance];
+    m_tunnel.DISTANCE = m_distance;
     m_distance+=elapse;
     
     [m_player onFrame:elapse];
