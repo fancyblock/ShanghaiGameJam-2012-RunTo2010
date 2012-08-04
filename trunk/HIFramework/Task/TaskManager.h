@@ -16,6 +16,8 @@
     NSMutableArray* m_runningTasks;
 }
 
+@property (nonatomic, readwrite) UIInterfaceOrientation CUR_ORIENTATION;
+
 + (TaskManager*)sharedInstance;
 
 

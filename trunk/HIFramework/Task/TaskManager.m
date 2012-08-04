@@ -13,6 +13,8 @@
 static TaskManager* m_instance;
 static BOOL m_saftFlag = NO;
 
+@synthesize CUR_ORIENTATION;
+
 
 /**
  * @desc    return the singleton of this class
@@ -63,6 +65,8 @@ static BOOL m_saftFlag = NO;
     m_pendingTasks = [[NSMutableArray alloc] init];
     m_runningTasks = [[NSMutableArray alloc] init];
     m_taskList = [[NSMutableArray alloc] init];
+    
+    self.CUR_ORIENTATION = UIInterfaceOrientationLandscapeLeft;
     
     return self;
 }

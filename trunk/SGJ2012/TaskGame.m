@@ -9,11 +9,14 @@
 #import "TaskGame.h"
 #import "RenderCore.h"
 
+#define SIDE_MOVE_SPEED 21
+
 @implementation TaskGame
 
 - (void)onBegin
 {
     m_tunnel = [[TimeTunnel alloc] init];
+    m_tunnel.MAX_DISTANCE = 60;
     m_distance = 0.0f;
     
     m_player = [[Player alloc] initWith:512 andY: 600];
@@ -23,6 +26,11 @@
     [m_item setAspect:(1.3333f) andFovy:atan(10.0f * (4.0f/3))];
     [m_item onBegin];
     //TODO
+    
+    // create the motion manager
+    m_motionMgr = [[CMMotionManager alloc] init];
+    [m_motionMgr setAccelerometerUpdateInterval:1.0f/30.0f];
+    [m_motionMgr startAccelerometerUpdates];
 }
 
 - (void)onEnd
@@ -33,6 +41,9 @@
     [m_player onEnd];
     
     [m_tunnel release];
+    
+    [m_motionMgr stopAccelerometerUpdates];
+    [m_motionMgr release];
 }
 
 - (void)onFrame:(float)elapse
@@ -42,6 +53,15 @@
     
     [m_item onUpdate:elapse];
     [m_player onFrame:elapse];
+    
+    // move the player to left or right by the accelerometer
+    CMAccelerometerData *newestAccel = m_motionMgr.accelerometerData;
+    double y = newestAccel.acceleration.y;
+    if( [TaskManager sharedInstance].CUR_ORIENTATION == UIInterfaceOrientationLandscapeRight )
+    {
+        y = -y;
+    }
+    [m_player MoveSide:y*SIDE_MOVE_SPEED];
 }
 
 - (void)onDraw:(float)elapse
@@ -57,6 +77,7 @@
 {
     //TODO
     [m_player onTouchEvent:events];
+    
     return NO; 
 }
 

@@ -108,7 +108,20 @@
     
     [self init];
     
+    //TODO
+    
     return self;
+}
+
+
+/**
+ * @desc    return the current orientation
+ * @para    none
+ * @return  none
+ */
+- (UIInterfaceOrientation)CUR_ORIENTATION
+{
+    return self.viewController.CURRENT_ORIENTATION;
 }
 
 

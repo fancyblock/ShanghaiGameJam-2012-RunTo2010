@@ -26,6 +26,7 @@
 
 - (void)createModel;
 - (void)createBox:(float)width andHeight:(float)height andLenght:(float)length;
+- (void)setInitUV;
 - (void)setFarAlpha:(float)alpha;
 - (void)setUOffset:(float)offset;
 
@@ -33,6 +34,7 @@
 
 @implementation TimeTunnel
 
+@synthesize MAX_DISTANCE;
 
 
 /**
@@ -90,7 +92,9 @@
     
     [self setUOffset:val];
     
-    //TODO
+    //float percent = self.TRAVEL_PERCENT;
+    //[self createBox:20 andHeight:15 andLenght:10*(1.0f-percent)];
+    
 }
 
 - (float)DISTANCE
@@ -104,7 +108,7 @@
  */
 - (float)TRAVEL_PERCENT
 {
-    return m_curDistance/MAX_DISTANCE;
+    return m_curDistance/self.MAX_DISTANCE;
 }
 
 
@@ -118,6 +122,7 @@
     m_model = [[GraphicFactory sharedInstance] CreateModel:@"timetunnel.png" withVertexCount:24];
     
     [self createBox:20 andHeight:15 andLenght:10];
+    [self setInitUV];
     [self setFarAlpha:0.1f];
     [self setUOffset:0];
 }
@@ -228,7 +233,12 @@
     m_model.VERTEX_BUFFER[69] = -halfWid;  
     m_model.VERTEX_BUFFER[70] = -halfHei;
     m_model.VERTEX_BUFFER[71] = -length;
-    
+}
+
+
+// set the init uv
+- (void)setInitUV
+{
     m_model.UV_BUFFER[1] = 0.0f;
     m_model.UV_BUFFER[3] = 0.25f;
     m_model.UV_BUFFER[5] = 0.25f;
@@ -256,7 +266,6 @@
     m_model.UV_BUFFER[43] = 0.75f;
     m_model.UV_BUFFER[45] = 1.0f;
     m_model.UV_BUFFER[47] = 0.75f;
-    
 }
 
 
