@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Sprite.h"
 #import "MovieClip.h"
+#import "Model.h"
 
 
 @interface GraphicFactory : NSObject
@@ -22,6 +23,8 @@
 - (Sprite*)CreateSprite:(NSString*)imgName;
 
 - (MovieClip*)CreateMovieClip:(NSString*)imgName withInterval:(float)interval;
+
+- (Model*)CreateModel:(NSString*)imgName withVertexCount:(int)count;
 
 
 @end

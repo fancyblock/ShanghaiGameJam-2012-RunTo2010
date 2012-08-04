@@ -16,6 +16,11 @@
 #define NO_TEXTURE      -1
 #define INIT_TEXTURE    -2
 
+#define COORD_PER_VERTEX    3
+#define COORD_PER_UV        2
+#define COORD_PER_COLOR     4
+#define COORD_PER_NORMAL    3
+
 
 // texture info struct
 @interface TextureInfo : NSObject
@@ -47,6 +52,8 @@
     int m_textureCount;
     NSMutableDictionary* m_textureDic;
     
+    NSMutableArray* m_modelList;
+    
     int m_curTextureIndex;
     int m_curIndexOffset;
     int m_curVertexOffset;
@@ -55,6 +62,9 @@
     
     NSMutableArray* m_renderChunks;
     float m_curDepth;
+    
+    int m_viewportWidth;
+    int m_viewportHeight;
 }
 
 + (RenderCore*)sharedInstance;
@@ -64,7 +74,7 @@
 - (void)Destory;
 - (void)Render;
 - (void)Clear;
-- (void)Setup2DEnv:(CGSize)size;
+- (void)Setup2DEnv;
 - (void)Setup3DEnv;
 
 - (BOOL)CreateTexture:(NSString*)picName;
