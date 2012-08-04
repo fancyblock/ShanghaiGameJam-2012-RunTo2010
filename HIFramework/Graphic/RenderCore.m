@@ -102,6 +102,10 @@ static BOOL m_safeFlag = NO;
     
     // set the 2d env
     [self Setup2DEnv];
+    
+    m_bgColorR = 0.0f;
+    m_bgColorG = 0.0f;
+    m_bgColorB = 0.0f;
 }
 
 
@@ -122,7 +126,7 @@ static BOOL m_safeFlag = NO;
     glLoadIdentity();
     
     // set the clear color
-    glClearColor( 1.0f, 1.0f, 1.0f, 1 );
+    glClearColor( m_bgColorR, m_bgColorG, m_bgColorB, 1 );
     
     glClearDepthf( Z_DEPTH );
     
@@ -215,6 +219,21 @@ static BOOL m_safeFlag = NO;
     // init the model list
     m_modelList = [[NSMutableArray alloc] init];
     
+}
+
+
+/**
+ * @desc    set the rgb color
+ * @para    r
+ * @para    g
+ * @para    b
+ * @return  none
+ */
+- (void)SetBGColorR:(float)r withG:(float)g withB:(float)b
+{
+    m_bgColorR = r;
+    m_bgColorG = g;
+    m_bgColorB = b;
 }
 
 

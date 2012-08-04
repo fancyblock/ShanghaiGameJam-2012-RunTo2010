@@ -66,6 +66,10 @@
     
     int m_viewportWidth;
     int m_viewportHeight;
+    
+    float m_bgColorR;
+    float m_bgColorG;
+    float m_bgColorB;
 }
 
 + (RenderCore*)sharedInstance;
@@ -77,6 +81,8 @@
 - (void)Clear;
 - (void)Setup2DEnv;
 - (void)Setup3DEnv;
+
+- (void)SetBGColorR:(float)r withG:(float)g withB:(float)b;
 
 - (BOOL)CreateTexture:(NSString*)picName;
 - (BOOL)IsTextureExist:(NSString*)picName;

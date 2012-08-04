@@ -13,26 +13,35 @@
 
 - (void)onBegin
 {
-    //TODO
+    m_tunnel = [[TimeTunnel alloc] init];
+    m_distance = 0.0f;
+    
     m_player = [[Player alloc] initWith:512 andY: 600];
     [m_player onBegin];
+    
+    //TODO
 }
 
 - (void)onEnd
 {
     //TODO
     [m_player onEnd];
+    
+    [m_tunnel release];
 }
 
 - (void)onFrame:(float)elapse
 {
-    //TODO
+    [m_tunnel SetDistance:m_distance];
+    m_distance+=elapse;
+    
     [m_player onFrame:elapse];
 }
 
 - (void)onDraw:(float)elapse
 {
-    //TODO
+    [m_tunnel Draw];
+    
     [m_player onDraw:elapse];
 }
 

@@ -13,9 +13,7 @@
 
 - (void)onBegin
 {
-    m_tunnel = [[TimeTunnel alloc] init];
-    
-    m_distance = 0.0f;
+    //TODO
 }
 
 
@@ -27,15 +25,13 @@
 
 - (void)onFrame:(float)elapse
 {
-    [m_tunnel SetDistance:m_distance];
-    
-    m_distance+=elapse;
+    //TODO
 }
 
 
 - (void)onDraw:(float)elapse
 {
-    [m_tunnel Draw];
+    //TODO
 }
 
 

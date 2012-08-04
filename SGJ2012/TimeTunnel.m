@@ -21,6 +21,7 @@
 
 #import "TimeTunnel.h"
 
+
 @interface TimeTunnel(private)
 
 - (void)createModel;
@@ -46,6 +47,22 @@
     [self createModel];
     
     return self;
+}
+
+
+/**
+ * @desc    deconstructor
+ * @para    none
+ * @return  none
+ */
+- (void)dealloc
+{
+    [m_leftWall release];
+    [m_rightWall release];
+    [m_ceil release];
+    [m_floor release];
+    
+    [super dealloc];
 }
 
 
