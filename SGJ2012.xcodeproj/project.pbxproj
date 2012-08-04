@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		393321E515CD49BC00EDA3B7 /* MemoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 393321E415CD49BC00EDA3B7 /* MemoryItem.m */; };
 		393321E915CD49D300EDA3B7 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 393321E815CD49D300EDA3B7 /* Player.m */; };
+		393321EC15CD50DC00EDA3B7 /* brown_bear.png in Resources */ = {isa = PBXBuildFile; fileRef = 393321EB15CD50DC00EDA3B7 /* brown_bear.png */; };
 		CF0B5F6F15BAFF94004DBDF9 /* GUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0B5F6E15BAFF94004DBDF9 /* GUIButton.m */; };
 		CF0B5F7215BAFFDC004DBDF9 /* GUICheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0B5F7115BAFFDC004DBDF9 /* GUICheckBox.m */; };
 		CF30A79315AF340200AAE45D /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF30A79215AF340200AAE45D /* OpenAL.framework */; };
@@ -53,6 +54,7 @@
 		393321E715CD49D300EDA3B7 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Player.h; path = SGJ2012/Player.h; sourceTree = "<group>"; };
 		393321E815CD49D300EDA3B7 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Player.m; path = SGJ2012/Player.m; sourceTree = "<group>"; };
 		393321EA15CD49E300EDA3B7 /* MemoryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MemoryItem.h; path = SGJ2012/MemoryItem.h; sourceTree = "<group>"; };
+		393321EB15CD50DC00EDA3B7 /* brown_bear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brown_bear.png; sourceTree = "<group>"; };
 		CF0B5F6D15BAFF94004DBDF9 /* GUIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GUIButton.h; path = Gui/UIController/GUIButton.h; sourceTree = "<group>"; };
 		CF0B5F6E15BAFF94004DBDF9 /* GUIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GUIButton.m; path = Gui/UIController/GUIButton.m; sourceTree = "<group>"; };
 		CF0B5F7015BAFFDC004DBDF9 /* GUICheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GUICheckBox.h; path = Gui/UIController/GUICheckBox.h; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				CF589ABC15CD381300A6EF20 /* wall02.png */,
+				393321EB15CD50DC00EDA3B7 /* brown_bear.png */,
 				CF589ABD15CD381300A6EF20 /* wall03.png */,
 				CF589ABA15CD0E1300A6EF20 /* floor.png */,
 				CF7AE1FB15CCCC3C00E07077 /* wall01.png */,
@@ -381,6 +384,7 @@
 				CF589ABB15CD0E1300A6EF20 /* floor.png in Resources */,
 				CF589ABE15CD381300A6EF20 /* wall02.png in Resources */,
 				CF589ABF15CD381300A6EF20 /* wall03.png in Resources */,
+				393321EC15CD50DC00EDA3B7 /* brown_bear.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
