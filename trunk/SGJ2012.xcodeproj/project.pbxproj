@@ -22,6 +22,7 @@
 		395019B215CD9917004C4A49 /* item_sparklers.png in Resources */ = {isa = PBXBuildFile; fileRef = 395019B115CD9917004C4A49 /* item_sparklers.png */; };
 		395B545515CDA03500C279B6 /* Bomb.m in Sources */ = {isa = PBXBuildFile; fileRef = 395019AA15CD861C004C4A49 /* Bomb.m */; };
 		39D3529C15CE40950073C6BA /* bomb.png in Resources */ = {isa = PBXBuildFile; fileRef = 39D3529B15CE40950073C6BA /* bomb.png */; };
+		39D352B215CE66B00073C6BA /* dali.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 39D352B115CE66B00073C6BA /* dali.jpg */; };
 		CF0B5F6F15BAFF94004DBDF9 /* GUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0B5F6E15BAFF94004DBDF9 /* GUIButton.m */; };
 		CF0B5F7215BAFFDC004DBDF9 /* GUICheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0B5F7115BAFFDC004DBDF9 /* GUICheckBox.m */; };
 		CF30A79315AF340200AAE45D /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF30A79215AF340200AAE45D /* OpenAL.framework */; };
@@ -90,6 +91,7 @@
 		395019AF15CD9819004C4A49 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		395019B115CD9917004C4A49 /* item_sparklers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = item_sparklers.png; sourceTree = "<group>"; };
 		39D3529B15CE40950073C6BA /* bomb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bomb.png; sourceTree = "<group>"; };
+		39D352B115CE66B00073C6BA /* dali.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dali.jpg; sourceTree = "<group>"; };
 		CF0B5F6D15BAFF94004DBDF9 /* GUIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GUIButton.h; path = Gui/UIController/GUIButton.h; sourceTree = "<group>"; };
 		CF0B5F6E15BAFF94004DBDF9 /* GUIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GUIButton.m; path = Gui/UIController/GUIButton.m; sourceTree = "<group>"; };
 		CF0B5F7015BAFFDC004DBDF9 /* GUICheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GUICheckBox.h; path = Gui/UIController/GUICheckBox.h; sourceTree = "<group>"; };
@@ -357,6 +359,7 @@
 		CF7E1DEA15661A20005D58C9 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				39D352B115CE66B00073C6BA /* dali.jpg */,
 				CF589B3715CE5BB900A6EF20 /* cutscences_1.png */,
 				CF589B3815CE5BB900A6EF20 /* cutscences_2.png */,
 				CF589B3915CE5BB900A6EF20 /* cutscences_3.png */,
@@ -472,6 +475,7 @@
 				CF589B3C15CE5BB900A6EF20 /* cutscences_2.png in Resources */,
 				CF589B3D15CE5BB900A6EF20 /* cutscences_3.png in Resources */,
 				CF589B3E15CE5BB900A6EF20 /* cutscences_4.png in Resources */,
+				39D352B215CE66B00073C6BA /* dali.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
