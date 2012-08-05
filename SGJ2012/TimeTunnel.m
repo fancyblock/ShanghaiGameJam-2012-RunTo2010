@@ -100,7 +100,6 @@
     {
         [self createBox:20 andHeight:15 andLenght:TUNNEL_DEFAULT_LEN*((1.0f-percent)/0.1f)];
     }
-    
 }
 
 - (float)DISTANCE
@@ -144,6 +143,8 @@
     TextureInfo* texInfo = [[RenderCore sharedInstance] GetTextureInfo:imgName];
     m_model.TEXTURE_INDEX = texInfo.INDEX;
     m_model.TEXTURE_NAME = imgName;
+    
+    m_curDistance = 0.0f;
 }
 
 
