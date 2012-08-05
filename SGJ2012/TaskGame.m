@@ -19,6 +19,7 @@
 - (void)onBegin
 {
     backgroundPictures = [NSArray arrayWithObjects: @"timetunnel.png", @"space.png", @"clouldy.png", nil];
+    [backgroundPictures retain];
     
     itemInStage1 = [NSArray arrayWithObjects: @"item_sparklers.png", @"item_house.png", nil];
     stage1ItemsTriggerTime[0] = 9;
@@ -91,6 +92,8 @@
             break;
     }
     
+    m_setout = NO;
+    
     m_currStage += 1;
 }
 
@@ -140,7 +143,7 @@
             break;
     }
     
-    for (int i = 0; i < m_currItemArray.count; i++)
+    for (int i = 0; i < [m_currItemArray count]; i++)
     {
         MemoryItem* t_item = [m_currItemArray objectAtIndex:i];
         [t_item onUpdate:elapse];
@@ -173,7 +176,7 @@
             break;
     }
     
-    for (int i = 0; i < m_currItemArray.count; i++)
+    for (int i = 0; i < [m_currItemArray count]; i++)
     {
         MemoryItem* t_item = [m_currItemArray objectAtIndex:i];
         [t_item onDraw];
@@ -215,7 +218,7 @@
 
 - (void)removeItem:(MemoryItem*)item
 {
-    for (int i = 0; i < m_currItemArray.count; i++)
+    for (int i = 0; i < [m_currItemArray count]; i++)
     {
         MemoryItem* t_item = [m_currItemArray objectAtIndex:i];
         if(t_item == item)
@@ -236,7 +239,7 @@
     
     [[RenderCore sharedInstance] SetBGColorR:1.0f withG:1.0f withB:1.0f];
     
-    for(int i = 0; i < itemInStage1.count; i++)
+    for(int i = 0; i < [itemInStage1 count]; i++)
     {
         NSString* t_fileName = [itemInStage1 objectAtIndex:i];
         MemoryItem* t_item = [[MemoryItem alloc] initWithType:1 andStartPosX:0 startPosY:-0.25 startPosZ:-20 withSpeed:5 withPlayer:m_player with: t_fileName];
@@ -256,7 +259,7 @@
 
 - (void)onFrameStage1:(float)elapse
 {
-    for (int i = 0; i < m_currItemArray.count; i++)
+    for (int i = 0; i < [m_currItemArray count]; i++)
     {
         MemoryItem* t_item = [m_currItemArray objectAtIndex:i];
         if(![t_item isAlive])
@@ -268,15 +271,18 @@
         }
     }
     
-    if (m_currItemArray.count == 0)
+    if ([m_currItemArray count] == 0)
     {
-        if( m_tunnel.TRAVEL_PERCENT < 0.89f )
+        if( m_setout == NO )
         {
-            m_delayTimer = 0.0f;
             [m_tunnel SetToExit];
+            m_distance = m_tunnel.DISTANCE;
+            m_setout = YES;
         }
         
-        if( m_tunnel.TRAVEL_PERCENT >= 1.0f )
+        float percent = m_tunnel.TRAVEL_PERCENT;
+        
+        if( percent >= 1.0f )
         {
             m_delayTimer += elapse;
             
@@ -324,7 +330,7 @@
     
     [[RenderCore sharedInstance] SetBGColorR:1.0f withG:1.0f withB:0.0f];
     
-    for(int i = 0; i < itemInStage2.count; i++)
+    for(int i = 0; i < [itemInStage2 count]; i++)
     {
         NSString* t_fileName = [itemInStage2 objectAtIndex:i];
         MemoryItem* t_item = [[MemoryItem alloc] initWithType:1 andStartPosX:0 startPosY:-0.25 startPosZ:-20 withSpeed:5 withPlayer:m_player with: t_fileName];
@@ -343,7 +349,7 @@
 
 - (void)onFrameStage2:(float)elapse
 {
-    for (int i = 0; i < m_currItemArray.count; i++)
+    for (int i = 0; i < [m_currItemArray count]; i++)
     {
         MemoryItem* t_item = [m_currItemArray objectAtIndex:i];
         if(![t_item isAlive])
@@ -355,19 +361,22 @@
         }
     }
     
-    if (m_currItemArray.count == 0)
+    if ([m_currItemArray count] == 0)
     {
-        if( m_tunnel.TRAVEL_PERCENT < 0.89f )
+        if( m_setout == NO )
         {
-            m_delayTimer = 0.0f;
             [m_tunnel SetToExit];
+            m_distance = m_tunnel.DISTANCE;
+            m_setout = YES;
         }
         
-        if( m_tunnel.TRAVEL_PERCENT >= 1.0f )
+        float percent = m_tunnel.TRAVEL_PERCENT;
+        
+        if( percent >= 1.0f )
         {
             m_delayTimer += elapse;
             
-            if( m_delayTimer >= 2.0f )
+            if( m_delayTimer >= 1.5f )
             {
                 [self nextStage];
             }
@@ -411,7 +420,7 @@
     
     [[RenderCore sharedInstance] SetBGColorR:0.0f withG:0.0f withB:1.0f];
     
-    for(int i = 0; i < itemInStage3.count; i++)
+    for(int i = 0; i < [itemInStage3 count]; i++)
     {
         NSString* t_fileName = [itemInStage3 objectAtIndex:i];
         MemoryItem* t_item = [[MemoryItem alloc] initWithType:1 andStartPosX:0 startPosY:-0.25 startPosZ:-20 withSpeed:5 withPlayer:m_player with: t_fileName];
@@ -430,7 +439,7 @@
 
 - (void)onFrameStage3:(float)elapse
 {
-    for (int i = 0; i < m_currItemArray.count; i++)
+    for (int i = 0; i < [m_currItemArray count]; i++)
     {
         MemoryItem* t_item = [m_currItemArray objectAtIndex:i];
         if(![t_item isAlive])
@@ -442,24 +451,24 @@
         }
     }
     
-    if (m_currItemArray.count == 0)
+    if ([m_currItemArray count] == 0)
     {
-        
-        if( m_tunnel.TRAVEL_PERCENT < 0.89f )
+        if( m_setout == NO )
         {
-            m_delayTimer = 0.0f;
             [m_tunnel SetToExit];
+            m_distance = m_tunnel.DISTANCE;
+            m_setout = YES;
         }
         
-        if( m_tunnel.TRAVEL_PERCENT >= 0.96f )
+        float percent = m_tunnel.TRAVEL_PERCENT;
+        
+        if( percent >= 1.0f )
         {
-            m_stopMoving = YES;
-            
             m_delayTimer += elapse;
             
-            if( m_delayTimer >= 2.0f )
+            if( m_delayTimer >= 1.5f )
             {
-                //TODO          
+                //TODO 
             }
         }
         

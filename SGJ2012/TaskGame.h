@@ -29,7 +29,7 @@
 #define STAGE2 1
 #define STAGE3 2
 
-NSArray*  backgroundPictures;
+static NSArray*  backgroundPictures;
 
 const static int stage1ItemCount = 2;
 NSArray*  itemInStage1;
@@ -68,6 +68,7 @@ int  stage3ItemsTriggerTime[stage3ItemCount];
     
     float m_delayTimer;
     BOOL m_stopMoving;
+    BOOL m_setout;
 
 }
 
