@@ -113,7 +113,9 @@
  */
 - (float)TRAVEL_PERCENT
 {
-    return m_curDistance/self.MAX_DISTANCE;
+    float percent = m_curDistance/self.MAX_DISTANCE;
+    
+    return percent;
 }
 
 
@@ -168,7 +170,7 @@
 {
     float halfWid = width / 2.0f;
     float halfHei = height / 2.0f;
-    float backDistance = 2;
+    float backDistance = 0;
     
     // left wall
     m_model.VERTEX_BUFFER[0] = -halfWid;
