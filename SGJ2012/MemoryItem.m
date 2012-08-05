@@ -132,6 +132,7 @@ startPosZ:(double)posZ withSpeed:(double)speed withPlayer:(Player*) player with:
             {
                 [m_player onContactItem:self];
                 [self disable];
+                [m_observer removeItem:self];
             }            
         }
     }

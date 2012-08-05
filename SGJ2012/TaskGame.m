@@ -21,15 +21,21 @@
     backgroundPictures = [NSArray arrayWithObjects: @"timetunnel.png", @"space.png", @"clouldy.png", nil];
     [backgroundPictures retain];
     
-    itemInStage1 = [NSArray arrayWithObjects: @"item_sparklers.png", @"item_house.png", nil];
-    stage1ItemsTriggerTime[0] = 9;
-    stage1ItemsTriggerTime[1] = 7;
+    itemInStage1 = [NSArray arrayWithObjects: @"item_sparklers.png", @"item_house.png", @"item_sparklers.png", @"item_house.png", nil];
+    [itemInStage1 retain];
+    stage1ItemsTriggerTime[0] = 1;
+    stage1ItemsTriggerTime[1] = 4;
+    stage1ItemsTriggerTime[2] = 7;
+    stage1ItemsTriggerTime[3] = 9;
      
     itemInStage2 = [NSArray arrayWithObjects: @"item_dress.png", @"item_camera.png", nil];
     stage2ItemsTriggerTime[0] = 10;
     stage2ItemsTriggerTime[1] = 18;
+    [itemInStage2 retain];   
     
     itemInStage3 = [NSArray arrayWithObjects: @"item_frog.png", @"item_sparklers.png", nil];
+    [itemInStage3 retain];
+    
     stage3ItemsTriggerTime[0] = 15;
     stage3ItemsTriggerTime[1] = 25;
 
@@ -149,7 +155,7 @@
         [t_item onUpdate:elapse];
     }
     
-    m_timer += 0.03333;
+    m_timer += elapse;
     
 }
 
@@ -242,7 +248,7 @@
     for(int i = 0; i < [itemInStage1 count]; i++)
     {
         NSString* t_fileName = [itemInStage1 objectAtIndex:i];
-        MemoryItem* t_item = [[MemoryItem alloc] initWithType:1 andStartPosX:0 startPosY:-0.25 startPosZ:-20 withSpeed:5 withPlayer:m_player with: t_fileName];
+        MemoryItem* t_item = [[MemoryItem alloc] initWithType:1 andStartPosX:0 startPosY:-0.25 startPosZ:-15 withSpeed:5 withPlayer:m_player with: t_fileName];
         
         [t_item setAspect:(1.3333f) andFovy:atan(10.0f * (4.0f/3))];
         
@@ -329,6 +335,8 @@
     m_tunnel.MAX_DISTANCE = 60.0f;
     
     [[RenderCore sharedInstance] SetBGColorR:1.0f withG:1.0f withB:0.0f];
+    
+    
     
     for(int i = 0; i < [itemInStage2 count]; i++)
     {
@@ -462,8 +470,21 @@
         
         float percent = m_tunnel.TRAVEL_PERCENT;
         
-        if( percent >= 1.0f )
+        if( percent >= 0.96f )
         {
+            if( m_stopMoving == NO )
+            {
+                m_stopMoving = YES;
+                m_delayTimer = 0.0f;
+                
+                
+                pic = [[GraphicFactory sharedInstance] CreateSprite:@"dali.jpg"];
+                [pic SetSize:CGPointMake(400, 279)];
+                [pic SetUVFrom:CGPointMake(0, 0 ) to: CGPointMake(1, 1)];
+                [pic SetAnchor:CGPointMake(0.5, 0.5)];
+                
+            }
+            
             m_delayTimer += elapse;
             
             if( m_delayTimer >= 1.5f )
@@ -483,6 +504,10 @@
 
 - (void)onDrawStage3:(float)elapse
 {
+    if (m_stopMoving)
+    {
+        [pic DrawAt:CGPointMake(512, 384)];
+    }
     
 }
 

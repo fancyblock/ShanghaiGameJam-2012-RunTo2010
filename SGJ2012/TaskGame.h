@@ -31,12 +31,12 @@
 
 static NSArray*  backgroundPictures;
 
-const static int stage1ItemCount = 2;
-NSArray*  itemInStage1;
+const static int stage1ItemCount = 4;
+static NSArray*  itemInStage1;
 int  stage1ItemsTriggerTime[stage1ItemCount];
 
 const static int stage2ItemCount = 2;
-NSArray*  itemInStage2;
+static NSArray*  itemInStage2;
 int  stage2ItemsTriggerTime[stage2ItemCount];
 
 const static int stage3ItemCount = 2;
@@ -69,6 +69,8 @@ int  stage3ItemsTriggerTime[stage3ItemCount];
     float m_delayTimer;
     BOOL m_stopMoving;
     BOOL m_setout;
+    
+    Sprite* pic;
 
 }
 
