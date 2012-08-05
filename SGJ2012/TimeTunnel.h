@@ -21,5 +21,7 @@
 @property (nonatomic, readwrite) float MAX_DISTANCE;
 
 - (void)Draw;
+- (void)SetTexture:(NSString*)imgName;
+- (void)SetToExit;
 
 @end

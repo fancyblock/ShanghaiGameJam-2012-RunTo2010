@@ -97,8 +97,6 @@
     
     [m_player onEnd];
     
-   
-    
     [m_tunnel release];
     
     [m_motionMgr stopAccelerometerUpdates];
@@ -108,7 +106,7 @@
 - (void)onFrame:(float)elapse
 {
     m_tunnel.DISTANCE = m_distance;
-    m_distance+=elapse;
+    m_distance+= (elapse * 0.6f);
     
     [m_bomb onFrame:elapse];
     [m_player onFrame:elapse];

@@ -18,6 +18,8 @@
 #define FLOOR_UN    0.0f
 #define FLOOR_UF    1.0f
 
+#define TUNNEL_DEFAULT_LEN  25
+
 
 #import "TimeTunnel.h"
 
@@ -92,8 +94,12 @@
     
     [self setUOffset:val];
     
-    //float percent = self.TRAVEL_PERCENT;
-    //[self createBox:20 andHeight:15 andLenght:10*(1.0f-percent)];
+    // close to the exit
+    float percent = self.TRAVEL_PERCENT;
+    if( percent > 0.9f )
+    {
+        [self createBox:20 andHeight:15 andLenght:TUNNEL_DEFAULT_LEN*((1.0f-percent)/0.1f)];
+    }
     
 }
 
@@ -112,6 +118,34 @@
 }
 
 
+/**
+ * @desc    set to the exit
+ * @para    none
+ * @return  none
+ */
+- (void)SetToExit
+{
+    m_curDistance = 0.9f * MAX_DISTANCE;
+}
+
+
+/**
+ * @desc    set texture
+ * @para    imgName
+ * @return  none
+ */
+- (void)SetTexture:(NSString*)imgName
+{
+    if( [[RenderCore sharedInstance] IsTextureExist:imgName] == NO )
+    {
+        [[RenderCore sharedInstance] CreateTexture:imgName];
+    }
+    
+    TextureInfo* texInfo = [[RenderCore sharedInstance] GetTextureInfo:imgName];
+    m_model.TEXTURE_INDEX = texInfo.INDEX;
+    m_model.TEXTURE_NAME = imgName;
+}
+
 
 //--------------------------- private functions ---------------------------
 
@@ -121,7 +155,7 @@
 {
     m_model = [[GraphicFactory sharedInstance] CreateModel:@"timetunnel.png" withVertexCount:24];
     
-    [self createBox:20 andHeight:15 andLenght:10];
+    [self createBox:20 andHeight:15 andLenght:TUNNEL_DEFAULT_LEN];
     [self setInitUV];
     [self setFarAlpha:0.1f];
     [self setUOffset:0];
