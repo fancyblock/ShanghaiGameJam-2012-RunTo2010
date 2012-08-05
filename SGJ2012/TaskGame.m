@@ -35,7 +35,7 @@
     m_currItemArray = [[NSMutableArray alloc] init];
     
     m_tunnel = [[TimeTunnel alloc] init];
-    m_tunnel.MAX_DISTANCE = 6000;
+    m_tunnel.MAX_DISTANCE = 60;
     m_distance = 0.0f;
     
     m_player = [[Player alloc] initWith:512 andY: 600];
@@ -232,7 +232,7 @@
 {
     NSString* t_backGroundFileName = [backgroundPictures objectAtIndex:0];
     [m_tunnel SetTexture:t_backGroundFileName];
-    m_tunnel.MAX_DISTANCE = 6000.0f;
+    m_tunnel.MAX_DISTANCE = 60.0f;
     
     [[RenderCore sharedInstance] SetBGColorR:1.0f withG:1.0f withB:1.0f];
     
@@ -320,7 +320,7 @@
     
     NSString* t_backGroundFileName = [backgroundPictures objectAtIndex:1];
     [m_tunnel SetTexture:t_backGroundFileName];
-    m_tunnel.MAX_DISTANCE = 6000.0f;
+    m_tunnel.MAX_DISTANCE = 60.0f;
     
     [[RenderCore sharedInstance] SetBGColorR:1.0f withG:1.0f withB:0.0f];
     
@@ -407,7 +407,7 @@
     
     NSString* t_backGroundFileName = [backgroundPictures objectAtIndex:2];
     [m_tunnel SetTexture:t_backGroundFileName];
-    m_tunnel.MAX_DISTANCE = 6000.0f;
+    m_tunnel.MAX_DISTANCE = 60.0f;
     
     [[RenderCore sharedInstance] SetBGColorR:0.0f withG:0.0f withB:1.0f];
     
