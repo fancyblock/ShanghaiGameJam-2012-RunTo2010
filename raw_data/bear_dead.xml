@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<Root>
+    <AtlasFormat TextureFormat="1">
+        <Atlas filename="image1.png" index="1">
+            <Texture2D filename="pic/7.png" UOffset="0.000000" VOffset="0.000000" UWidth="0.341797" VHeight="0.244141" X="0" Y="0" Width="350" Height="250" />
+            <Texture2D filename="pic/8.png" UOffset="0.343750" VOffset="0.000000" UWidth="0.341797" VHeight="0.244141" X="352" Y="0" Width="350" Height="250" />
+            <Texture2D filename="pic/9.png" UOffset="0.000000" VOffset="0.246094" UWidth="0.341797" VHeight="0.244141" X="0" Y="252" Width="350" Height="250" />
+        </Atlas>
+        <Atlas filename="image0.png" index="0">
+            <Texture2D filename="pic/1.png" UOffset="0.000000" VOffset="0.000000" UWidth="0.341797" VHeight="0.244141" X="0" Y="0" Width="350" Height="250" />
+            <Texture2D filename="pic/10.png" UOffset="0.343750" VOffset="0.000000" UWidth="0.341797" VHeight="0.244141" X="352" Y="0" Width="350" Height="250" />
+            <Texture2D filename="pic/11.png" UOffset="0.000000" VOffset="0.246094" UWidth="0.341797" VHeight="0.244141" X="0" Y="252" Width="350" Height="250" />
+            <Texture2D filename="pic/2.png" UOffset="0.000000" VOffset="0.492188" UWidth="0.341797" VHeight="0.244141" X="0" Y="504" Width="350" Height="250" />
+            <Texture2D filename="pic/3.png" UOffset="0.000000" VOffset="0.738281" UWidth="0.341797" VHeight="0.244141" X="0" Y="756" Width="350" Height="250" />
+            <Texture2D filename="pic/4.png" UOffset="0.343750" VOffset="0.246094" UWidth="0.341797" VHeight="0.244141" X="352" Y="252" Width="350" Height="250" />
+            <Texture2D filename="pic/5.png" UOffset="0.343750" VOffset="0.492188" UWidth="0.341797" VHeight="0.244141" X="352" Y="504" Width="350" Height="250" />
+            <Texture2D filename="pic/6.png" UOffset="0.343750" VOffset="0.738281" UWidth="0.341797" VHeight="0.244141" X="352" Y="756" Width="350" Height="250" />
+        </Atlas>
+    </AtlasFormat>
+</Root>
