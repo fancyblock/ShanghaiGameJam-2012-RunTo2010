@@ -49,6 +49,10 @@
 		CF589AE715CD8E1100A6EF20 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF589AE615CD8E1100A6EF20 /* CoreMotion.framework */; };
 		CF589B3415CE4FC900A6EF20 /* clouldy.png in Resources */ = {isa = PBXBuildFile; fileRef = CF589B3215CE4FC900A6EF20 /* clouldy.png */; };
 		CF589B3515CE4FC900A6EF20 /* space.png in Resources */ = {isa = PBXBuildFile; fileRef = CF589B3315CE4FC900A6EF20 /* space.png */; };
+		CF589B3B15CE5BB900A6EF20 /* cutscences_1.png in Resources */ = {isa = PBXBuildFile; fileRef = CF589B3715CE5BB900A6EF20 /* cutscences_1.png */; };
+		CF589B3C15CE5BB900A6EF20 /* cutscences_2.png in Resources */ = {isa = PBXBuildFile; fileRef = CF589B3815CE5BB900A6EF20 /* cutscences_2.png */; };
+		CF589B3D15CE5BB900A6EF20 /* cutscences_3.png in Resources */ = {isa = PBXBuildFile; fileRef = CF589B3915CE5BB900A6EF20 /* cutscences_3.png */; };
+		CF589B3E15CE5BB900A6EF20 /* cutscences_4.png in Resources */ = {isa = PBXBuildFile; fileRef = CF589B3A15CE5BB900A6EF20 /* cutscences_4.png */; };
 		CF74090D15B92B52003FF3CE /* MovieClip.m in Sources */ = {isa = PBXBuildFile; fileRef = CF74090C15B92B51003FF3CE /* MovieClip.m */; };
 		CF74380715AD8B5A007E40A8 /* UIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CF74380615AD8B5A007E40A8 /* UIManager.m */; };
 		CF76B95C15AFC80D00D34DC1 /* UIWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = CF76B95B15AFC80D00D34DC1 /* UIWidget.m */; };
@@ -127,6 +131,10 @@
 		CF589AE615CD8E1100A6EF20 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		CF589B3215CE4FC900A6EF20 /* clouldy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clouldy.png; sourceTree = "<group>"; };
 		CF589B3315CE4FC900A6EF20 /* space.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = space.png; sourceTree = "<group>"; };
+		CF589B3715CE5BB900A6EF20 /* cutscences_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cutscences_1.png; sourceTree = "<group>"; };
+		CF589B3815CE5BB900A6EF20 /* cutscences_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cutscences_2.png; sourceTree = "<group>"; };
+		CF589B3915CE5BB900A6EF20 /* cutscences_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cutscences_3.png; sourceTree = "<group>"; };
+		CF589B3A15CE5BB900A6EF20 /* cutscences_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cutscences_4.png; sourceTree = "<group>"; };
 		CF74090B15B92B51003FF3CE /* MovieClip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MovieClip.h; path = Graphic/MovieClip.h; sourceTree = "<group>"; };
 		CF74090C15B92B51003FF3CE /* MovieClip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MovieClip.m; path = Graphic/MovieClip.m; sourceTree = "<group>"; };
 		CF74380515AD8B5A007E40A8 /* UIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIManager.h; path = Gui/UIManager.h; sourceTree = "<group>"; };
@@ -349,6 +357,10 @@
 		CF7E1DEA15661A20005D58C9 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				CF589B3715CE5BB900A6EF20 /* cutscences_1.png */,
+				CF589B3815CE5BB900A6EF20 /* cutscences_2.png */,
+				CF589B3915CE5BB900A6EF20 /* cutscences_3.png */,
+				CF589B3A15CE5BB900A6EF20 /* cutscences_4.png */,
 				CF589B3215CE4FC900A6EF20 /* clouldy.png */,
 				CF589B3315CE4FC900A6EF20 /* space.png */,
 				39D3529B15CE40950073C6BA /* bomb.png */,
@@ -456,6 +468,10 @@
 				39D3529C15CE40950073C6BA /* bomb.png in Resources */,
 				CF589B3415CE4FC900A6EF20 /* clouldy.png in Resources */,
 				CF589B3515CE4FC900A6EF20 /* space.png in Resources */,
+				CF589B3B15CE5BB900A6EF20 /* cutscences_1.png in Resources */,
+				CF589B3C15CE5BB900A6EF20 /* cutscences_2.png in Resources */,
+				CF589B3D15CE5BB900A6EF20 /* cutscences_3.png in Resources */,
+				CF589B3E15CE5BB900A6EF20 /* cutscences_4.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

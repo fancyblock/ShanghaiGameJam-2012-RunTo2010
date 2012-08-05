@@ -74,7 +74,7 @@
     if( btn == m_btnStart )
     {
         [self Stop];
-        [[GlobalWork sharedInstance]._taskGame Start];
+        [[GlobalWork sharedInstance]._taskStartCutscene Start];
     }
 }
 
