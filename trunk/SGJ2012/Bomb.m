@@ -9,8 +9,8 @@
 #import "Bomb.h"
 #import "HIFramework.h"
 
-static const int width = 152;
-static const int length = 163;
+static const int width = 50;
+static const int length = 58;
 
 
 @implementation Bomb
@@ -32,7 +32,7 @@ static const int length = 163;
 
 - (void)onCreate;
 {
-    m_sprite = [[GraphicFactory sharedInstance] CreateSprite:@"item_sparklers.png"];
+    m_sprite = [[GraphicFactory sharedInstance] CreateSprite:@"bomb.png"];
     [m_sprite SetUVFrom:CGPointMake(0, 0) to:CGPointMake(1, 1)];
     [m_sprite SetSize:CGPointMake(width, length)];
 }
@@ -57,7 +57,7 @@ static const int length = 163;
         if (absZ < 0)
             absZ = - absZ;
         
-        [m_sprite SetSize:CGPointMake(width/absZ, length/absZ)];
+        [m_sprite SetSize:CGPointMake(width/absZ * 3, length/absZ * 3)];
         
         
         if(m_pos3d->z < -30)

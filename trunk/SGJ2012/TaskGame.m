@@ -18,7 +18,7 @@
 
 - (void)onBegin
 {
-    backgroundPictures = [NSArray arrayWithObjects: @"stage1.png", @"stage2.png", @"stage3.png", nil];
+    backgroundPictures = [NSArray arrayWithObjects: @"timetunnel.png", @"timetunnel.png", @"timetunnel.png", nil];
     
     itemInStage1 = [NSArray arrayWithObjects: @"item_sparklers.png", @"item_house.png", nil];
     stage1ItemsTriggerTime[0] = 9;
@@ -223,6 +223,9 @@
 
 - (void)onbeginStage1
 {
+    NSString* t_backGroundFileName = [backgroundPictures objectAtIndex:0];
+    [m_tunnel SetTexture:t_backGroundFileName];
+    
     for(int i = 0; i < itemInStage1.count; i++)
     {
         NSString* t_fileName = [itemInStage1 objectAtIndex:i];
@@ -254,9 +257,18 @@
             }
         }
     }
+    
+    if (m_currItemArray.count == 0)
+    {
+        
+            
+    }else
+    {
+        
+        if (m_timer > STAGE1CYCLETIME)
+            m_timer = 0;
 
-    if (m_timer > STAGE1CYCLETIME)
-        m_timer = 0;
+    }
 }
 
 - (void)onDrawStage1:(float)elapse
@@ -266,9 +278,155 @@
 
 - (void)handleEventStage1:(NSArray *)events
 {
-    [m_bomb launch:10 withX: [m_player getPositionX]];
+    // magic number 60 means that bear throw bomb by its left hand
+    [m_bomb launch:5 withX: [m_player getPositionX]-60];
     
     [m_player transitStateTo:attack];
 }
 
+- (void)onEndStage1
+{
+    [m_player disable];
+    [m_bomb disable];
+}
+
+- (void)onbeginStage2
+{
+    [m_player enable];
+    
+    NSString* t_backGroundFileName = [backgroundPictures objectAtIndex:1];
+    [m_tunnel SetTexture:t_backGroundFileName];
+    
+    for(int i = 0; i < itemInStage2.count; i++)
+    {
+        NSString* t_fileName = [itemInStage2 objectAtIndex:i];
+        MemoryItem* t_item = [[MemoryItem alloc] initWithType:1 andStartPosX:0 startPosY:-0.25 startPosZ:-20 withSpeed:5 withPlayer:m_player with: t_fileName];
+        
+        [t_item setAspect:(1.3333f) andFovy:atan(10.0f * (4.0f/3))];
+        
+        [t_item setTriggerTime:stage2ItemsTriggerTime[i]];
+        
+        [t_item setBomb:m_bomb];
+        
+        [t_item setObserver:self];
+        
+        [m_currItemArray addObject:t_item];
+    }
+}
+
+- (void)onFrameStage2:(float)elapse
+{
+    for (int i = 0; i < m_currItemArray.count; i++)
+    {
+        MemoryItem* t_item = [m_currItemArray objectAtIndex:i];
+        if(![t_item isAlive])
+        {
+            if(m_timer > stage2ItemsTriggerTime[i])
+            {
+                [t_item enable];
+            }
+        }
+    }
+    
+    if (m_currItemArray.count == 0)
+    {
+        //to stage3
+        
+    }else
+    {
+        
+        if (m_timer > STAGE2CYCLETIME)
+            m_timer = 0;
+        
+    }
+}
+
+- (void)onDrawStage2:(float)elapse
+{
+    
+}
+
+- (void)handleEventStage2:(NSArray *)events
+{
+    // magic number 60 means that bear throw bomb by its left hand
+    [m_bomb launch:10 withX: [m_player getPositionX]-60];
+    
+    [m_player transitStateTo:attack];
+}
+
+- (void)onEndStage2
+{
+    [m_player disable];
+    [m_bomb disable];
+}
+
+- (void)onbeginStage3
+{
+    [m_player enable];
+    
+    NSString* t_backGroundFileName = [backgroundPictures objectAtIndex:2];
+    [m_tunnel SetTexture:t_backGroundFileName];
+    
+    for(int i = 0; i < itemInStage3.count; i++)
+    {
+        NSString* t_fileName = [itemInStage3 objectAtIndex:i];
+        MemoryItem* t_item = [[MemoryItem alloc] initWithType:1 andStartPosX:0 startPosY:-0.25 startPosZ:-20 withSpeed:5 withPlayer:m_player with: t_fileName];
+        
+        [t_item setAspect:(1.3333f) andFovy:atan(10.0f * (4.0f/3))];
+        
+        [t_item setTriggerTime:stage3ItemsTriggerTime[i]];
+        
+        [t_item setBomb:m_bomb];
+        
+        [t_item setObserver:self];
+        
+        [m_currItemArray addObject:t_item];
+    }
+}
+
+- (void)onFrameStage3:(float)elapse
+{
+    for (int i = 0; i < m_currItemArray.count; i++)
+    {
+        MemoryItem* t_item = [m_currItemArray objectAtIndex:i];
+        if(![t_item isAlive])
+        {
+            if(m_timer > stage3ItemsTriggerTime[i])
+            {
+                [t_item enable];
+            }
+        }
+    }
+    
+    if (m_currItemArray.count == 0)
+    {
+        //to stage3
+        
+    }else
+    {
+        
+        if (m_timer > STAGE3CYCLETIME)
+            m_timer = 0;
+        
+    }
+}
+
+- (void)onDrawStage3:(float)elapse
+{
+    
+}
+
+- (void)handleEventStage3:(NSArray *)events
+{
+    // magic number 60 means that bear throw bomb by its left hand
+    [m_bomb launch:15 withX: [m_player getPositionX]-60];
+    
+    [m_player transitStateTo:attack];
+}
+
+- (void)onEndStage3
+{
+    [m_player disable];
+    [m_bomb disable];
+}
 @end

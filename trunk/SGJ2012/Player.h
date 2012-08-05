@@ -29,6 +29,8 @@
     double m_posY;
     
     double m_animationTimer;
+    
+    BOOL m_alive;
 }
 
 - (id) initWith:(double)posX andY:(double)posY;
@@ -76,5 +78,9 @@
 - (double) getPositionX;
 
 - (void)MoveSide:(float)offset;
+
+- (void)disable;
+
+- (void)enable;
 
 @end
