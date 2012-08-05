@@ -14,6 +14,7 @@
     Model* m_model;
     
     float m_curDistance;
+    int m_curBGM;
 }
 
 @property (nonatomic, readwrite) float DISTANCE;
