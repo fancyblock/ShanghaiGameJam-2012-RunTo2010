@@ -45,4 +45,6 @@
 - (void)onDraw;
 
 - (Point3d*)getPoint3d;
+
+- (BOOL)isAlive;
 @end

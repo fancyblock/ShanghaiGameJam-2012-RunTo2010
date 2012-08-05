@@ -12,8 +12,8 @@
 
 NSDictionary* typ2Item = NULL;
 
-const int width = 155;
-const int length = 219;
+const int width = 180;
+const int length = 180;
 
 @implementation MemoryItem
 
@@ -23,16 +23,15 @@ const int length = 219;
     m_type = type;
     m_startPosX = posX;
     m_startPosY = posY;
-    m_isAlive = YES;
     m_posX = posX;
     m_posY = posY;
-    m_alive = YES;
+    m_alive = NO;
     
     return self;
 }
 
 - (id)initWithType:(int)type andStartPosX:(double)posX startPosY:(double)posY
-startPosZ:(double)posZ withSpeed:(double)speed withPlayer:(Player*) player;
+startPosZ:(double)posZ withSpeed:(double)speed withPlayer:(Player*) player with:(NSString *)fileName;
 {
     [super init];
     m_type = type;
@@ -42,13 +41,20 @@ startPosZ:(double)posZ withSpeed:(double)speed withPlayer:(Player*) player;
     m_pos3d->y = posY;
     m_pos3d->z = posZ;
     
-    m_alive = YES;
+    m_alive = NO;
     m_posX = posX;
     m_posY = posY;
     m_speed = speed;
     
     m_player = player;
     
+    m_spite = [[GraphicFactory sharedInstance] CreateSprite:fileName];
+    [m_spite SetUVFrom:CGPointMake(0, 0) to:CGPointMake(1, 1)];
+    [m_spite SetSize:CGPointMake(180, 180)];
+    [m_spite SetAnchor:CGPointMake(0.5, 0.1)];
+    
+    m_scaleFactor = 1;
+
     return self;
 }
 
@@ -60,11 +66,6 @@ startPosZ:(double)posZ withSpeed:(double)speed withPlayer:(Player*) player;
 
 - (void)onBegin
 {
-
-    m_spite = [[GraphicFactory sharedInstance] CreateSprite:@"brown_bear.png"];
-    [m_spite SetUVFrom:CGPointMake(0, 0) to:CGPointMake(1, 1)];
-    [m_spite SetSize:CGPointMake(155, 219)];
-    [m_spite SetAnchor:CGPointMake(0.5, 0.1)];
 }
 
 - (void)projection
@@ -79,6 +80,8 @@ startPosZ:(double)posZ withSpeed:(double)speed withPlayer:(Player*) player;
 {
     free(m_pos3d);
     m_pos3d = NULL;
+    
+    [m_spite release];
 }
 
 - (void)onDraw
@@ -100,23 +103,23 @@ startPosZ:(double)posZ withSpeed:(double)speed withPlayer:(Player*) player;
 {
     [self projection];
     
-    srand(time(NULL));
-        
     double absZ = m_pos3d->z;
     
     if (absZ < 0)
         absZ = - absZ;
     
-    [m_spite SetSize:CGPointMake(width/absZ, length/absZ)];
+    [m_spite SetSize:CGPointMake(width/absZ * m_scaleFactor, length/absZ * m_scaleFactor)];
     
-    m_pos3d->z += elapse * m_speed;
+   
     
     if (m_pos3d->z > 0)
     {
-        m_pos3d->z = -20;
+        [self disable];
     }
-    else 
+    else if(m_alive)
     {
+        m_pos3d->z += elapse * m_speed;
+        
         double t_zDistance = abs(m_pos3d->z);
         
         
@@ -126,53 +129,67 @@ startPosZ:(double)posZ withSpeed:(double)speed withPlayer:(Player*) player;
             
             // we need a small edge value to test whether item contact player
             if (abs( playerX - (m_posX + 0.5) * 1024) < width * 0.8)
+            {
                 [m_player onContactItem:self];
+                [self disable];
+            }            
         }
     }
     
    
-    if (m_bomb != NULL)
+    if (m_bomb != NULL && m_alive && [m_bomb isAlive])
     {
         Point3d* t_bombPos3d = [m_bomb getPoint3d];
         if([self canCollide:m_pos3d->x with:m_pos3d->y with:m_pos3d->z with:t_bombPos3d->x with:t_bombPos3d->y with:t_bombPos3d->z])
         {
             //collid with bomb!
-            m_alive = NO;
+            [self disable];
             [m_bomb disable];
+            [m_observer removeItem:self];
         }
     }
     
-    if(!m_alive)
-    { 
-        m_cooldownTimer += 0.0333;
-        if (m_cooldownTimer > 3)
-        {   
-            double r = random()%100;
-            double randomX = r/100;
-            double negativeFlg = random() % 2;
-            
-            if (negativeFlg != 0)
-            {
-                randomX = -randomX;
-            }
-            m_alive = YES;
-            m_pos3d->z = -20;
-            m_pos3d->x = randomX;
-            m_cooldownTimer = 0;
-        
-        }
-    }
 }
 
-- (void)onAfterOneCycle
-{}
+- (void)onAfterOneCycle:(double)factor
+{
+    m_scaleFactor += factor;
+}
+
 
 - (void)setBomb:(Bomb*)bomb
 {
     m_bomb = bomb;
 }
+
 - (void)disable
 {
     m_alive = NO;
 }
+
+- (void)enable
+{
+    m_alive = YES;
+}
+
+- (void)setTriggerTime:(double)time
+{
+    m_triggerTime = time;
+}
+
+- (double)getTriggerTime
+{
+    return m_triggerTime;
+}
+
+- (double)isAlive
+{
+    return m_alive;
+}
+
+- (void)setObserver:(Task*)task;
+{
+    m_observer = task;
+}
+
 @end
