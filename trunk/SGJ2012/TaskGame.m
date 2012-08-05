@@ -18,7 +18,7 @@
 
 - (void)onBegin
 {
-    backgroundPictures = [NSArray arrayWithObjects: @"timetunnel.png", @"timetunnel.png", @"timetunnel.png", nil];
+    backgroundPictures = [NSArray arrayWithObjects: @"timetunnel.png", @"space.png", @"clouldy.png", nil];
     
     itemInStage1 = [NSArray arrayWithObjects: @"item_sparklers.png", @"item_house.png", nil];
     stage1ItemsTriggerTime[0] = 9;
@@ -35,7 +35,7 @@
     m_currItemArray = [[NSMutableArray alloc] init];
     
     m_tunnel = [[TimeTunnel alloc] init];
-    m_tunnel.MAX_DISTANCE = 60;
+    m_tunnel.MAX_DISTANCE = 6000;
     m_distance = 0.0f;
     
     m_player = [[Player alloc] initWith:512 andY: 600];
@@ -55,7 +55,11 @@
     
     m_currStage = 0;
     
+    [[RenderCore sharedInstance] SetBGColorR:1.0f withG:1.0f withB:1.0f];
+    
     [self nextStage];
+    
+    m_stopMoving = NO;
 }
 
 
@@ -105,8 +109,11 @@
 
 - (void)onFrame:(float)elapse
 {
-    m_tunnel.DISTANCE = m_distance;
-    m_distance+= (elapse * 0.6f);
+    if( m_stopMoving == NO )
+    {
+        m_tunnel.DISTANCE = m_distance;
+        m_distance+= (elapse * 0.6f);
+    }
     
     [m_bomb onFrame:elapse];
     [m_player onFrame:elapse];
@@ -225,6 +232,9 @@
 {
     NSString* t_backGroundFileName = [backgroundPictures objectAtIndex:0];
     [m_tunnel SetTexture:t_backGroundFileName];
+    m_tunnel.MAX_DISTANCE = 6000.0f;
+    
+    [[RenderCore sharedInstance] SetBGColorR:1.0f withG:1.0f withB:1.0f];
     
     for(int i = 0; i < itemInStage1.count; i++)
     {
@@ -260,7 +270,21 @@
     
     if (m_currItemArray.count == 0)
     {
+        if( m_tunnel.TRAVEL_PERCENT < 0.89f )
+        {
+            m_delayTimer = 0.0f;
+            [m_tunnel SetToExit];
+        }
         
+        if( m_tunnel.TRAVEL_PERCENT >= 1.0f )
+        {
+            m_delayTimer += elapse;
+            
+            if( m_delayTimer >= 1.5f )
+            {
+                [self nextStage];
+            }
+        }
             
     }else
     {
@@ -296,6 +320,9 @@
     
     NSString* t_backGroundFileName = [backgroundPictures objectAtIndex:1];
     [m_tunnel SetTexture:t_backGroundFileName];
+    m_tunnel.MAX_DISTANCE = 6000.0f;
+    
+    [[RenderCore sharedInstance] SetBGColorR:1.0f withG:1.0f withB:0.0f];
     
     for(int i = 0; i < itemInStage2.count; i++)
     {
@@ -330,7 +357,21 @@
     
     if (m_currItemArray.count == 0)
     {
-        //to stage3
+        if( m_tunnel.TRAVEL_PERCENT < 0.89f )
+        {
+            m_delayTimer = 0.0f;
+            [m_tunnel SetToExit];
+        }
+        
+        if( m_tunnel.TRAVEL_PERCENT >= 1.0f )
+        {
+            m_delayTimer += elapse;
+            
+            if( m_delayTimer >= 2.0f )
+            {
+                [self nextStage];
+            }
+        }
         
     }else
     {
@@ -366,6 +407,9 @@
     
     NSString* t_backGroundFileName = [backgroundPictures objectAtIndex:2];
     [m_tunnel SetTexture:t_backGroundFileName];
+    m_tunnel.MAX_DISTANCE = 6000.0f;
+    
+    [[RenderCore sharedInstance] SetBGColorR:0.0f withG:0.0f withB:1.0f];
     
     for(int i = 0; i < itemInStage3.count; i++)
     {
@@ -400,7 +444,24 @@
     
     if (m_currItemArray.count == 0)
     {
-        //to stage3
+        
+        if( m_tunnel.TRAVEL_PERCENT < 0.89f )
+        {
+            m_delayTimer = 0.0f;
+            [m_tunnel SetToExit];
+        }
+        
+        if( m_tunnel.TRAVEL_PERCENT >= 0.96f )
+        {
+            m_stopMoving = YES;
+            
+            m_delayTimer += elapse;
+            
+            if( m_delayTimer >= 2.0f )
+            {
+                //TODO          
+            }
+        }
         
     }else
     {

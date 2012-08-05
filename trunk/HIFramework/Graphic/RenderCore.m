@@ -279,7 +279,7 @@ static float g_pitchInc = 0.4f;
     //glTranslatef(0, -3, 0);
     glRotatef(g_pitch, 1.0f, 0.0f, 0.0f);
     g_pitch += g_pitchInc;
-    if( g_pitch > 5.0f || g_pitch < -5.0f )
+    if( g_pitch > 4.0f || g_pitch < -4.0f )
     {
         g_pitchInc = -g_pitchInc;
     }
