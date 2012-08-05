@@ -22,6 +22,7 @@
 
 
 #import "TimeTunnel.h"
+#import "GlobalWork.h"
 
 
 @interface TimeTunnel(private)
@@ -127,6 +128,8 @@
 - (void)SetToExit
 {
     m_curDistance = 0.9f * MAX_DISTANCE;
+    
+    [[SoundManager sharedInstance] StopSound:m_curBGM];
 }
 
 
@@ -147,6 +150,19 @@
     m_model.TEXTURE_NAME = imgName;
     
     m_curDistance = 0.0f;
+    
+    if( [imgName isEqualToString:@"timetunnel.png"] )
+    {
+        [[SoundManager sharedInstance] PlaySound:[GlobalWork sharedInstance]._bgm01 withLoop:INFINITE_LOOP];
+    }
+    if( [imgName isEqualToString:@"space.png"] )
+    {
+        [[SoundManager sharedInstance] PlaySound:[GlobalWork sharedInstance]._bgm02 withLoop:INFINITE_LOOP];
+    }
+    if( [imgName isEqualToString:@"clouldy.png"] )
+    {
+        [[SoundManager sharedInstance] PlaySound:[GlobalWork sharedInstance]._bgm03 withLoop:INFINITE_LOOP];
+    }
 }
 
 
