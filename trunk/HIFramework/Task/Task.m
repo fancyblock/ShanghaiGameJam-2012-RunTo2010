@@ -8,6 +8,9 @@
 
 #import "Task.h"
 #import "TaskManager.h"
+#import "HIAppDelegate.h"
+#import "HIApp.h"
+
 
 @implementation Task
 
@@ -49,6 +52,17 @@
 - (void)Stop
 {
     [[TaskManager sharedInstance] StopTask:self];
+}
+
+
+/**
+ * @desc    getter of the main view
+ * @para    none
+ * @return  main view ( openGL view )
+ */
+- (UIView*)MAIN_VIEW
+{
+    return ((HIAppDelegate*)[UIApplication sharedApplication].delegate).GameApp.viewController.view;
 }
 
 

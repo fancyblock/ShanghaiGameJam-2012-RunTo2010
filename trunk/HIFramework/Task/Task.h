@@ -22,6 +22,7 @@
 }
 
 @property (nonatomic, readwrite) int STATUS;
+@property (nonatomic, readonly) UIView* MAIN_VIEW;
 
 
 - (void)Start;
