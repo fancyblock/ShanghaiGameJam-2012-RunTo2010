@@ -29,10 +29,6 @@
     [m_cutscene03 SetUVFrom:CGPointMake(0, 0) to:CGPointMake(1, 1)];
     [m_cutscene03 SetSize:CGPointMake(1000, 750)];
     
-    m_cutscene04 = [[GraphicFactory sharedInstance] CreateSprite:@"cutscences_4.png"];
-    [m_cutscene04 SetUVFrom:CGPointMake(0, 0) to:CGPointMake(1, 1)];
-    [m_cutscene04 SetSize:CGPointMake(1000, 750)];
-    
     m_state = 0;
     m_curPic = m_cutscene01;
     m_timer = 0.0f;
@@ -44,7 +40,6 @@
     [m_cutscene01 release];
     [m_cutscene02 release];
     [m_cutscene03 release];
-    [m_cutscene04 release];
 }
 
 - (void)onFrame:(float)elapse
@@ -68,10 +63,6 @@
             m_curPic = m_cutscene03;
         }
         if( m_state == 3 )
-        {
-            m_curPic = m_cutscene04;
-        }
-        if( m_state == 4 )
         {
             [self Stop];
             [[GlobalWork sharedInstance]._taskGame Start];
