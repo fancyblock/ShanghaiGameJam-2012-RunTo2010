@@ -24,6 +24,8 @@
 @implementation HIAppDelegate
 
 @synthesize window = _window;
+@synthesize GameApp = m_gameApp;
+
 
 - (void)dealloc
 {

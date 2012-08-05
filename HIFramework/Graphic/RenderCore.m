@@ -103,7 +103,7 @@ static BOOL m_safeFlag = NO;
     // set the 2d env
     [self Setup2DEnv];
     
-    m_bgColorR = 1.0f;
+    m_bgColorR = 0.0f;
     m_bgColorG = 0.0f;
     m_bgColorB = 0.0f;
 }
@@ -163,7 +163,7 @@ static BOOL m_safeFlag = NO;
     glMatrixMode( GL_PROJECTION );
     glLoadIdentity();
     float screenRatio = (float)m_viewportHeight/(float)m_viewportWidth;
-    glFrustumf( -10, 10, -10 * screenRatio, 10 * screenRatio, 1, 50 );        //[TEMP]
+    glFrustumf( -10, 10, -10 * screenRatio, 10 * screenRatio, 2, 50 );        //[TEMP]
     
     // set the model view matrix
     glMatrixMode( GL_MODELVIEW );
@@ -256,6 +256,9 @@ static BOOL m_safeFlag = NO;
 }
 
 
+static float g_pitch = 0.1f;
+static float g_pitchInc = 0.4f;
+
 /**
  * @desc    openGL render
  * @para    none
@@ -273,7 +276,14 @@ static BOOL m_safeFlag = NO;
     [self Setup3DEnv];
     
     //[HACK]
-    //TODO
+    //glTranslatef(0, -3, 0);
+    glRotatef(g_pitch, 1.0f, 0.0f, 0.0f);
+    g_pitch += g_pitchInc;
+    if( g_pitch > 5.0f || g_pitch < -5.0f )
+    {
+        g_pitchInc = -g_pitchInc;
+    }
+    //[HACK]
     
     // draw the model
     count = [m_modelList count];
