@@ -11,7 +11,7 @@
 
 #define MAX_VERTEX_NUM      1024
 #define MAX_INDEX_NUM       2048
-#define MAX_TEXTURE_NUM     32
+#define MAX_TEXTURE_NUM     64
 
 #define Z_DEPTH             100.0f
 #define Z_STEP              0.1f
