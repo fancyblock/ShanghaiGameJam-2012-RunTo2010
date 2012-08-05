@@ -21,9 +21,14 @@
 {
     int m_currState;
     Sprite* m_PlayerSprite;
-    MovieClip* m_moveClip;
+    
+    MovieClip* m_movieClip_run;
+    MovieClip* m_movieClip_throw;
+    
     double m_posX;
     double m_posY;
+    
+    double m_animationTimer;
 }
 
 - (id) initWith:(double)posX andY:(double)posY;

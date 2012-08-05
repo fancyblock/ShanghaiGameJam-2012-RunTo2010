@@ -12,6 +12,7 @@
 
 @class Player;
 @class Bomb;
+@class TaskGame;
 
 #define ITEM_CELLPHONE @"item_cellphone.png"
 #define ITEM_DIAMOND_RING @"item_diamond_ring.png"
@@ -29,7 +30,6 @@
     
     int m_type;
     int m_cycleCount;
-    BOOL m_isAlive;
     
     double m_speed;
     
@@ -41,13 +41,19 @@
     Bomb* m_bomb;
     BOOL m_alive;
     
+    double m_triggerTime;
+    
+    double m_scaleFactor;
+    
     double m_cooldownTimer;
+    
+    TaskGame* m_observer;
 }
 
 - (id)initWithType:(int)type andStartPosX: (double)posX startPosY:(double)posY;
 
 - (id)initWithType:(int)type andStartPosX:(double)posX startPosY:(double)posY
-         startPosZ:(double)posZ withSpeed:(double)speed withPlayer:(Player*)player;
+         startPosZ:(double)posZ withSpeed:(double)speed withPlayer:(Player*)player with: (NSString*) fileName;
 
 - (void)setAspect:(double) aspect andFovy:(double)fovy;
 
@@ -59,7 +65,7 @@
 
 - (void)onEnd;
 
-- (void)onAfterOneCycle;
+- (void)onAfterOneCycle:(double)factor;
 
 - (void)projection;
 
@@ -67,6 +73,16 @@
 
 - (void)disable;
 
+- (void)enable;
+
 - (double)canCollide:(double)x1 with:(double)y1 with:(double)z1 with:(double)x2 with:(double)y2 with:(double)z2;
+
+- (void)setTriggerTime:(double)time;
+
+- (double)getTriggerTime;
+
+- (BOOL)isAlive;
+
+- (void)setObserver:(TaskGame*)task;
 
 @end

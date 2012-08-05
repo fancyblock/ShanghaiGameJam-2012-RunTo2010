@@ -10,6 +10,7 @@
 
 const static int width = 155;
 const static int length = 219;
+const static double attackAnimaionInterval = 0.066;
 
 @implementation Player
 
@@ -20,6 +21,29 @@ const static int length = 219;
     m_posX = posX;
     m_posY = posY;
     m_currState = invalid;
+    
+    m_movieClip_run = [[GraphicFactory sharedInstance] CreateMovieClip:@"bear_animation.png" withInterval:0.06];
+    [m_movieClip_run AddFrame:CGRectMake(0.197266, 0.294922, 0.148438, 0.234375) withAnchor:(CGPointMake(0.5, 0.3)) withSize:(CGPointMake(152, 240))];
+    [m_movieClip_run AddFrame:CGRectMake(0.197266, 0.531250, 0.148438, 0.234375) withAnchor:(CGPointMake(0.5, 0.3)) withSize:(CGPointMake(152, 240))];
+    [m_movieClip_run AddFrame:CGRectMake(0.347656, 0.294922, 0.148438, 0.234375) withAnchor:(CGPointMake(0.5, 0.3)) withSize:(CGPointMake(152, 240))];
+    [m_movieClip_run AddFrame:CGRectMake(0.347656, 0.531250, 0.148438, 0.234375) withAnchor:(CGPointMake(0.5, 0.3)) withSize:(CGPointMake(152, 240))];
+    
+    
+    m_movieClip_throw = [[GraphicFactory sharedInstance] CreateMovieClip:@"bear_animation.png" withInterval:attackAnimaionInterval];
+    [m_movieClip_throw AddFrame:CGRectMake(0, 0, 0.148438, 0.234375) withAnchor:(CGPointMake(0.5, 0.3)) withSize:(CGPointMake(152, 240))];
+    [m_movieClip_throw AddFrame:CGRectMake(0, 0.294922, 0.148438, 0.234375) withAnchor:(CGPointMake(0.5, 0.3)) withSize:(CGPointMake(152, 240))];
+    [m_movieClip_throw AddFrame:CGRectMake(0, 0.589844, 0.148438, 0.234375) withAnchor:(CGPointMake(0.5, 0.3)) withSize:(CGPointMake(152, 240))];
+    [m_movieClip_throw AddFrame:CGRectMake(0.197266, 0, 0.148438, 0.234375) withAnchor:(CGPointMake(0.5, 0.3)) withSize:(CGPointMake(152, 240))];
+    // 5
+    [m_movieClip_throw AddFrame:CGRectMake(0.394531, 0, 0.148438, 0.234375) withAnchor:(CGPointMake(0.5, 0.3)) withSize:(CGPointMake(152, 240))];
+    
+    // 6
+    [m_movieClip_throw AddFrame:CGRectMake(0.591797, 0, 0.148438, 0.234375) withAnchor:(CGPointMake(0.5, 0.3)) withSize:(CGPointMake(152, 240))];
+    
+    // 7
+    [m_movieClip_throw AddFrame:CGRectMake(0.789062, 0, 0.148438, 0.234375) withAnchor:(CGPointMake(0.5, 0.3)) withSize:(CGPointMake(152, 240))];
+
+    
     return self;
 }
  
@@ -36,24 +60,17 @@ const static int length = 219;
 // state run
 - (void)beginRun
 {
-    m_PlayerSprite = [[GraphicFactory sharedInstance ] CreateSprite:@"brown_bear.png"];
-    [m_PlayerSprite SetUVFrom:CGPointMake(0, 0) to:CGPointMake(1, 1)];
-    [m_PlayerSprite SetSize:CGPointMake(155, 219)];
-    [m_PlayerSprite SetAnchor:CGPointMake(0.5, 0.5)];
-    
-    m_moveClip = [[GraphicFactory sharedInstance] CreateMovieClip:@"image0.png" withInterval:0.06];
-    [m_moveClip AddFrame:CGRectMake(0, 0, 0.59375, 0.234375) withAnchor:(CGPointMake(0.5, 0.3)) withSize:(CGPointMake(152, 240))];
-     [m_moveClip AddFrame:CGRectMake(0, 0.236328, 0.59375, 0.234375) withAnchor:(CGPointMake(0.5, 0.3)) withSize:(CGPointMake(152, 240))];
-     [m_moveClip AddFrame:CGRectMake(0, 0.472656, 0.59375, 0.234375) withAnchor:(CGPointMake(0.5, 0.3)) withSize:(CGPointMake(152, 240))];
-     [m_moveClip AddFrame:CGRectMake(0, 0.708984, 0.59375, 0.234375) withAnchor:(CGPointMake(0.5, 0.3)) withSize:(CGPointMake(152, 240))];
-    
 }
 - (void)endRun
 {}
 - (void)updateRun:(double)elapse
-{}
+{
+    [m_movieClip_run Update:elapse];
+}
 - (void)drawRun
 {
+    [m_movieClip_run Draw];
+    [m_movieClip_run SetPosition:CGPointMake(m_posX, m_posY)];
     
 }
 - (void)handleEventRun:(NSArray *)events
@@ -100,9 +117,24 @@ const static int length = 219;
 - (void)endAttack
 {}
 - (void)updateAttack:(double)elapse
-{}
+{
+    
+    [m_movieClip_throw Update:elapse];
+    
+    m_animationTimer += 0.0333;
+    
+    if(m_animationTimer > 7 * attackAnimaionInterval)
+    {
+        m_animationTimer = 0;
+        [self transitStateTo:run];
+    }
+}
 - (void)drawAttack
-{}
+{
+    [m_movieClip_throw Draw];
+    [m_movieClip_throw SetPosition:CGPointMake(m_posX, m_posY)];
+
+}
 - (void)handleEventAttack:(NSArray *)events
 {}
 
@@ -196,7 +228,7 @@ const static int length = 219;
 
 - (void)onFrame:(double)elapse
 {
-    [m_moveClip Update:elapse];
+    
     
     switch(m_currState)
     {
@@ -231,9 +263,30 @@ const static int length = 219;
 
 - (void)onDraw:(double)elapse
 {
-    //[m_PlayerSprite DrawAt:CGPointMake(m_posX, m_posY)];
-    [m_moveClip Draw];
-    [m_moveClip SetPosition:CGPointMake(m_posX, m_posY)];
+    switch(m_currState)
+    {
+            
+        case run:
+            [self drawRun];
+            break;
+            
+        case attack:
+            [self drawAttack];
+            break;
+            
+        case attacked:
+            [self drawAttacked];
+            break;
+            
+        case die:
+            [self drawDie];
+            break;
+            
+        default:
+            break;
+            
+    }
+    
 }
 
 - (BOOL)onTouchEvent:(NSArray*)events

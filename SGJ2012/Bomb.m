@@ -108,4 +108,9 @@ static const int length = 163;
 {
     return m_pos3d;
 }
+
+- (BOOL)isAlive
+{
+    return m_alive;
+}
 @end
