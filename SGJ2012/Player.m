@@ -165,6 +165,7 @@ const static double attackAnimaionInterval = 0.066;
 
 - (void)onBegin
 {
+    [self enable];
     [self transitStateTo:run];
     //TODO
 }
@@ -229,7 +230,8 @@ const static double attackAnimaionInterval = 0.066;
 - (void)onFrame:(double)elapse
 {
     
-    
+    if (m_alive)
+    {
     switch(m_currState)
     {
         case invalid:
@@ -257,12 +259,14 @@ const static double attackAnimaionInterval = 0.066;
         
     }
     
-    
+    }
     
 }
 
 - (void)onDraw:(double)elapse
 {
+    if(m_alive)
+    {
     switch(m_currState)
     {
             
@@ -286,12 +290,15 @@ const static double attackAnimaionInterval = 0.066;
             break;
             
     }
+    }
     
 }
 
 - (BOOL)onTouchEvent:(NSArray*)events
 {
     //TODO
+    if(m_alive)
+    {
     switch(m_currState)
     {
         case invalid:
@@ -317,6 +324,7 @@ const static double attackAnimaionInterval = 0.066;
             break;
             
     }
+    }
     
     return NO; 
 }
@@ -331,5 +339,15 @@ const static double attackAnimaionInterval = 0.066;
 {
     return m_posX;
     
+}
+
+- (void)disable
+{
+    m_alive = NO;
+}
+
+- (void)enable
+{
+    m_alive = YES;
 }
 @end
