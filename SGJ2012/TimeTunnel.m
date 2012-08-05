@@ -158,7 +158,7 @@
     
     [self createBox:20 andHeight:15 andLenght:TUNNEL_DEFAULT_LEN];
     [self setInitUV];
-    [self setFarAlpha:0.1f];
+    [self setFarAlpha:0.2f];
     [self setUOffset:0];
 }
 
@@ -168,15 +168,16 @@
 {
     float halfWid = width / 2.0f;
     float halfHei = height / 2.0f;
+    float backDistance = 2;
     
     // left wall
     m_model.VERTEX_BUFFER[0] = -halfWid;
     m_model.VERTEX_BUFFER[1] = halfHei;
-    m_model.VERTEX_BUFFER[2] = 0;
+    m_model.VERTEX_BUFFER[2] = backDistance;
     
     m_model.VERTEX_BUFFER[3] = -halfWid;     
     m_model.VERTEX_BUFFER[4] = -halfHei;    
-    m_model.VERTEX_BUFFER[5] = 0;
+    m_model.VERTEX_BUFFER[5] = backDistance;
     
     m_model.VERTEX_BUFFER[6] = -halfWid;        
     m_model.VERTEX_BUFFER[7] = -halfHei;    
@@ -184,7 +185,7 @@
     
     m_model.VERTEX_BUFFER[9] = -halfWid;    
     m_model.VERTEX_BUFFER[10] = halfHei;    
-    m_model.VERTEX_BUFFER[11] = 0;
+    m_model.VERTEX_BUFFER[11] = backDistance;
     
     m_model.VERTEX_BUFFER[12] = -halfWid;   
     m_model.VERTEX_BUFFER[13] = -halfHei;   
@@ -197,11 +198,11 @@
     // top wall
     m_model.VERTEX_BUFFER[18] = halfWid;   
     m_model.VERTEX_BUFFER[19] = halfHei;     
-    m_model.VERTEX_BUFFER[20] = 0;           
+    m_model.VERTEX_BUFFER[20] = backDistance;           
     
     m_model.VERTEX_BUFFER[21] = -halfWid;    
     m_model.VERTEX_BUFFER[22] = halfHei;    
-    m_model.VERTEX_BUFFER[23] = 0;
+    m_model.VERTEX_BUFFER[23] = backDistance;
     
     m_model.VERTEX_BUFFER[24] = -halfWid;  
     m_model.VERTEX_BUFFER[25] = halfHei;   
@@ -209,7 +210,7 @@
     
     m_model.VERTEX_BUFFER[27] = halfWid;  
     m_model.VERTEX_BUFFER[28] = halfHei;   
-    m_model.VERTEX_BUFFER[29] = 0;
+    m_model.VERTEX_BUFFER[29] = backDistance;
     
     m_model.VERTEX_BUFFER[30] = -halfWid; 
     m_model.VERTEX_BUFFER[31] = halfHei; 
@@ -222,11 +223,11 @@
     // right wall
     m_model.VERTEX_BUFFER[36] = halfWid; 
     m_model.VERTEX_BUFFER[37] = -halfHei;  
-    m_model.VERTEX_BUFFER[38] = 0;           
+    m_model.VERTEX_BUFFER[38] = backDistance;           
     
     m_model.VERTEX_BUFFER[39] = halfWid; 
     m_model.VERTEX_BUFFER[40] = halfHei;  
-    m_model.VERTEX_BUFFER[41] = 0;
+    m_model.VERTEX_BUFFER[41] = backDistance;
     
     m_model.VERTEX_BUFFER[42] = halfWid;   
     m_model.VERTEX_BUFFER[43] = halfHei;  
@@ -234,7 +235,7 @@
     
     m_model.VERTEX_BUFFER[45] = halfWid;  
     m_model.VERTEX_BUFFER[46] = -halfHei;
-    m_model.VERTEX_BUFFER[47] = 0;
+    m_model.VERTEX_BUFFER[47] = backDistance;
     
     m_model.VERTEX_BUFFER[48] = halfWid;
     m_model.VERTEX_BUFFER[49] = halfHei;
@@ -247,11 +248,11 @@
     // floor
     m_model.VERTEX_BUFFER[54] = -halfWid;  
     m_model.VERTEX_BUFFER[55] = -halfHei;  
-    m_model.VERTEX_BUFFER[56] = 0;
+    m_model.VERTEX_BUFFER[56] = backDistance;
     
     m_model.VERTEX_BUFFER[57] = halfWid; 
     m_model.VERTEX_BUFFER[58] = -halfHei; 
-    m_model.VERTEX_BUFFER[59] = 0;
+    m_model.VERTEX_BUFFER[59] = backDistance;
     
     m_model.VERTEX_BUFFER[60] = halfWid; 
     m_model.VERTEX_BUFFER[61] = -halfHei;  
@@ -259,7 +260,7 @@
     
     m_model.VERTEX_BUFFER[63] = -halfWid;  
     m_model.VERTEX_BUFFER[64] = -halfHei; 
-    m_model.VERTEX_BUFFER[65] = 0;
+    m_model.VERTEX_BUFFER[65] = backDistance;
     
     m_model.VERTEX_BUFFER[66] = halfWid;  
     m_model.VERTEX_BUFFER[67] = -halfHei; 

@@ -21,7 +21,12 @@
 @property (nonatomic, readwrite) int _bgm03;
 
 @property (nonatomic, readwrite) int _seHit;
-//TODO
+@property (nonatomic, readwrite) int _seBomb;
+@property (nonatomic, readwrite) int _seDie;
+@property (nonatomic, readwrite) int _seStep1;
+@property (nonatomic, readwrite) int _seStep2;
+@property (nonatomic, readwrite) int _seKumahit;
+@property (nonatomic, readwrite) int _seEnemyUpgrade;
 
 + (GlobalWork*)sharedInstance;
 

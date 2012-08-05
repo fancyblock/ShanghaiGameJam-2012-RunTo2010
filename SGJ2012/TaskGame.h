@@ -65,6 +65,9 @@ int  stage3ItemsTriggerTime[stage3ItemCount];
     NSMutableArray* m_currItemArray;
     
     double m_timer;
+    
+    float m_delayTimer;
+    BOOL m_stopMoving;
 
 }
 

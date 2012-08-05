@@ -22,6 +22,12 @@ static GlobalWork* m_instance = nil;
 @synthesize _bgm03;
 @synthesize _seHit;
 
+@synthesize _seDie;
+@synthesize _seBomb;
+@synthesize _seStep1;
+@synthesize _seStep2;
+@synthesize _seKumahit;
+@synthesize _seEnemyUpgrade;
 
 
 /**
