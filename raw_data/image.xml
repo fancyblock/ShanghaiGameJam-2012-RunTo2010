@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<Root>
+    <AtlasFormat TextureFormat="1">
+        <Atlas filename="image0.png" index="0">
+            <Texture2D filename="pic/bear_throw01.png" UOffset="0.000000" VOffset="0.000000" UWidth="0.195312" VHeight="0.292969" X="0" Y="0" Width="200" Height="300" />
+            <Texture2D filename="pic/bear_throw02.png" UOffset="0.000000" VOffset="0.294922" UWidth="0.195312" VHeight="0.292969" X="0" Y="302" Width="200" Height="300" />
+            <Texture2D filename="pic/bear_throw03.png" UOffset="0.000000" VOffset="0.589844" UWidth="0.195312" VHeight="0.292969" X="0" Y="604" Width="200" Height="300" />
+            <Texture2D filename="pic/bear_throw04.png" UOffset="0.197266" VOffset="0.000000" UWidth="0.195312" VHeight="0.292969" X="202" Y="0" Width="200" Height="300" />
+            <Texture2D filename="pic/bear_throw05.png" UOffset="0.394531" VOffset="0.000000" UWidth="0.195312" VHeight="0.292969" X="404" Y="0" Width="200" Height="300" />
+            <Texture2D filename="pic/bear_throw06.png" UOffset="0.591797" VOffset="0.000000" UWidth="0.195312" VHeight="0.292969" X="606" Y="0" Width="200" Height="300" />
+            <Texture2D filename="pic/bear_throw07.png" UOffset="0.789062" VOffset="0.000000" UWidth="0.195312" VHeight="0.292969" X="808" Y="0" Width="200" Height="300" />
+            <Texture2D filename="pic/bear_run01.png" UOffset="0.197266" VOffset="0.294922" UWidth="0.148438" VHeight="0.234375" X="202" Y="302" Width="152" Height="240" />
+            <Texture2D filename="pic/bear_run02.png" UOffset="0.197266" VOffset="0.531250" UWidth="0.148438" VHeight="0.234375" X="202" Y="544" Width="152" Height="240" />
+            <Texture2D filename="pic/bear_run03.png" UOffset="0.347656" VOffset="0.294922" UWidth="0.148438" VHeight="0.234375" X="356" Y="302" Width="152" Height="240" />
+            <Texture2D filename="pic/bear_run04.png" UOffset="0.347656" VOffset="0.531250" UWidth="0.148438" VHeight="0.234375" X="356" Y="544" Width="152" Height="240" />
+        </Atlas>
+    </AtlasFormat>
+</Root>
